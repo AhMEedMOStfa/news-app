@@ -1,0 +1,15 @@
+a   
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 11px;
+}
+li
+{
+ list-style-type: none;   
+}
+img
+{
+    width:80%;
+}
