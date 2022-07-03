@@ -34,6 +34,8 @@ import { ManchetComponent } from './components/reusable/manchet/manchet.componen
     BrowserModule,
     AppRoutingModule,
      FormsModule,
+    HttpClientModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
