@@ -7,11 +7,11 @@ a
 {
     text-decoration: none;
     color: black;
-    padding: 12px;
+    padding: 10px;
     transition: 0.2s all;
 }
 a:hover
 {
-    background-color: #f60d2b;
+    background-color: var(--main-color);
     color: #fff;
 }
