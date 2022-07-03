@@ -12,6 +12,7 @@ import { TechnologyComponent } from './components/pages/technology/technology.co
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import {FormsModule} from '@angular/forms';
 import { ManchetComponent } from './components/reusable/manchet/manchet.component';
 
 
@@ -26,11 +27,13 @@ import { ManchetComponent } from './components/reusable/manchet/manchet.componen
     ContactsComponent,
     HomeComponent,
     NotFoundComponent,
+
     ManchetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+     FormsModule,
     HttpClientModule
   ],
   providers: [],
