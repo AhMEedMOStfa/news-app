@@ -12,6 +12,7 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
