@@ -11,6 +11,7 @@ import { TechnologyComponent } from './components/pages/technology/technology.co
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { ReactiveFormsModule,FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,13 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     TechnologyComponent,
     ContactsComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
