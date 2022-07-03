@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiPoliticsService } from 'src/app/Services/api-news.service';
 
 @Component({
   selector: 'app-sports',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SportsComponent implements OnInit {
 
-  constructor() { }
+  sportsNews:any;
+  newsCategory:any;
+  constructor(private activeRouter:ActivatedRoute ,private apiNews:ApiPoliticsService ) { }
 
   ngOnInit(): void {
+    this.newsCategory = this.activeRouter.snapshot.routeConfig?.path;
+    this.apiNews.getData(this.newsCategory).subscribe((manchet)=>{
+      this.sportsNews=manchet.articles;
+    })
   }
 
 }

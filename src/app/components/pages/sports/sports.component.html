@@ -1,1 +1,8 @@
-<p>sports works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let manchet of sportsNews">
+            <app-manchet [manchetData] = 'manchet'></app-manchet>
+        </div>
+    </div>
+</div>
