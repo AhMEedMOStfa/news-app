@@ -6,7 +6,7 @@ export interface News {
   publishedAt: string;
   content: string;
   author: string;
-  articles:Array<object>
+  articles: Array<object>;
 }
-
+//fff
 //ddd
