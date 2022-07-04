@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { News } from 'src/app/interface/news';
 import { ApiPoliticsService } from 'src/app/Services/api-news.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 
 @Component({
   selector: 'app-technology',
@@ -14,7 +15,8 @@ export class TechnologyComponent implements OnInit {
 
   constructor(
     private activeRouter: ActivatedRoute,
-    private apiNews: ApiPoliticsService
+    private apiNews: ApiPoliticsService,
+    public loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {

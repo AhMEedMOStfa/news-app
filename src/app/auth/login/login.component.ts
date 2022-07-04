@@ -40,6 +40,10 @@ export class LoginComponent implements OnInit {
   submitForm() {
     console.log(this.loginForm.value);
   }
+
+  checkAuth() {
+    return localStorage.setItem('auth',"true");
+  }
   ngOnInit(): void {
   }
 
