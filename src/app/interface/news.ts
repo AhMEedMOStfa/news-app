@@ -8,6 +8,5 @@ export interface News {
   // author: string;
   articles: Array<object>;
 }
-//fff
-//ddd
-//ddd
+
+
