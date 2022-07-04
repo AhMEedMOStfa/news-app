@@ -6,11 +6,12 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { PoliticsComponent } from './components/pages/politics/politics.component';
 import { SportsComponent } from './components/pages/sports/sports.component';
 import { TechnologyComponent } from './components/pages/technology/technology.component';
+import { AuthenticationGuard } from './guards/authentication.guard';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'politics',component:PoliticsComponent},
+  {path:'politics',component:PoliticsComponent,canActivate: [AuthenticationGuard]},
   {path:'sports',component:SportsComponent},
   {path:'technology',component:TechnologyComponent},
   {path:'contacts',component:ContactsComponent},
