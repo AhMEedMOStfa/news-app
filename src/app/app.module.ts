@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
-import {ButtonModule} from 'primeng/button';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,11 +13,9 @@ import { TechnologyComponent } from './components/pages/technology/technology.co
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
-import {FormsModule} from '@angular/forms';
 import { ManchetComponent } from './components/reusable/manchet/manchet.component';
 import { BusinessComponent } from './components/pages/business/business.component';
-
-
+import { InterceptorService } from './Services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -32,18 +29,17 @@ import { BusinessComponent } from './components/pages/business/business.componen
     HomeComponent,
     NotFoundComponent,
     ManchetComponent,
-      BusinessComponent
+    BusinessComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     FormsModule,
     HttpClientModule,
-    FormsModule,
-    HttpClientModule,
-    ButtonModule
+    ButtonModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
