@@ -15,6 +15,7 @@ export class SportsComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsCategory = this.activeRouter.snapshot.routeConfig?.path;
+    console.log(this.newsCategory)
     this.apiNews.getData(this.newsCategory).subscribe((manchet)=>{
       this.sportsNews=manchet.articles;
     })

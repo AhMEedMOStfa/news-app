@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { News } from 'src/app/interface/news';
+import { ApiPoliticsService } from 'src/app/Services/api-news.service';
 
 @Component({
   selector: 'app-technology',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologyComponent implements OnInit {
 
-  constructor() { }
+  techonolgy: any;
+  newsCategory:string|undefined;
+
+  constructor(private activeRouter:ActivatedRoute , private apiNews:ApiPoliticsService ) { }
 
   ngOnInit(): void {
+    this.newsCategory = this.activeRouter.snapshot.routeConfig?.path;
+    this.apiNews.getData(this.newsCategory).subscribe((manchet)=> {
+      this.techonolgy = manchet.articles
+      console.log( this.techonolgy)
+    })
   }
 
 }
