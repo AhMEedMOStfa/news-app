@@ -1,8 +1,20 @@
-<div class="card" style="width: 18rem;">
+<!-- <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
     <img src={{manchetData.urlToImage}} class="manchet-img card-img-top" alt="...">
     <div class="card-body">
       <h5 class="manchet-title card-title">{{manchetData.title}}</h5>
       <p class="manchet-desc card-text">{{manchetData.description}}</p>
       <a href="#" class="btn btn-primary">Read More</a>
     </div>
+  </div> -->
+
+  <a class="text-decoration-none" href={{manchetData.url}} target="_blank">
+    <div class="news-card shadow rounded my-3">
+    <img src={{manchetData.urlToImage}} class="manchet-img card-img-top" alt="#">
+    <div class="card-text">
+      <h5 class="mx-4 my-2">{{manchetData.title}}</h5>
+      <div class="d-flex justify-content-between mx-4 ">
+      <p>{{manchetData.publishedAt | date:'short' }}</p><span><i class="fa-regular fa-bookmark"></i></span>
+    </div>
+    </div>
   </div>
+</a>

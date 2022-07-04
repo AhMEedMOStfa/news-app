@@ -8,7 +8,7 @@ export class ApiPoliticsService {
   constructor(private http: HttpClient) {}
   getData(category: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=ae57e2c718a444629059fa1fc20114a6`
+      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=5c18e00523004f30b085ac5f9986d6d1`
     );
   }
 }

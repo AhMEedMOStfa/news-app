@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ButtonModule } from 'primeng/button';
+
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/htt
 import { AppComponent } from './app.component';
 import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -35,7 +36,7 @@ import { InterceptorService } from './Services/interceptor.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ButtonModule,
+    FormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
