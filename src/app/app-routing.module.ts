@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BusinessComponent } from './components/pages/business/business.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'politics',component:PoliticsComponent},
   {path:'sports',component:SportsComponent},
   {path:'technology',component:TechnologyComponent},
+  {path:'business',component:BusinessComponent},
   {path:'contacts',component:ContactsComponent},
   {path:'auth',loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
 

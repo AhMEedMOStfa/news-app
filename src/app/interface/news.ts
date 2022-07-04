@@ -5,6 +5,6 @@ export interface News {
     // urlToImage:string,
     // publishedAt:string,
     // content:string,
-    // author:string,
+    //  author:string,
     articles:Array<object>
 }
