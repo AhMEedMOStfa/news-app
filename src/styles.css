@@ -1,12 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root
-{
-    --main-color:#f60d2b;
+:root {
+  --main-color: #f60d2b;
+}
+
+.loader {
+  text-align: center;
+  z-index: 10;
+  height: 70vh;
+
+  background-image: url("../assets/images/loading.gif");
+  background-position: center center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
 }
