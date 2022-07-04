@@ -1,18 +1,24 @@
-.manchet-desc { 
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 100px;
-}
 
-.manchet-title 
-{
+.card-text h5 { 
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
- 
+    height: 50x;
+}
+
+a , p 
+{
+    color: black;
+
+}
+
+
+i 
+{
+    color: #FFD700 ; 
+    font-size: 1.2rem;
+  
 }
 
 

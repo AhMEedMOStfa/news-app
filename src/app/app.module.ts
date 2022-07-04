@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {ButtonModule} from 'primeng/button';
 
+
 import { AppComponent } from './app.component';
 import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -41,7 +42,7 @@ import { BusinessComponent } from './components/pages/business/business.componen
     HttpClientModule,
     FormsModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
