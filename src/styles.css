@@ -1,19 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@400;500;600;700&family=Satisfy&display=swap');
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@400;500;600;700&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body 
-{
-    font-family: 'Raleway', sans-serif;
+body {
+  font-family: "Raleway", sans-serif;
 }
-:root
-{
-    --main-color:#f60d2b;
+:root {
+  --main-color: #f60d2b;
 }
 .loader {
   text-align: center;
@@ -24,17 +21,19 @@ body
   background-position: center center;
 
   background-size: contain;
-  background-repeat: no-
-
-h1,h2,h3,h4,h5,h6 
-{
-    font-family: 'Gentium Book Plus', serif;
-    font-weight: 700;
-} 
-
-p 
-{
-    font-family: 'Open Sans', sans-serif;
+  background-repeat: no-repeat;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+}
 
+p {
+  font-family: "Open Sans", sans-serif;
+}

@@ -10,20 +10,28 @@ import { TechnologyComponent } from './components/pages/technology/technology.co
 import { AuthenticationGuard } from './guards/authentication.guard';
 
 const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home',component:HomeComponent},
-  {path:'politics',component:PoliticsComponent,canActivate: [AuthenticationGuard]},
-  {path:'sports',component:SportsComponent},
-  {path:'technology',component:TechnologyComponent},
-  {path:'business',component:BusinessComponent},
-  {path:'contacts',component:ContactsComponent},
-  {path:'auth',loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'politics',
+    component: PoliticsComponent,
+    canActivate: [AuthenticationGuard],
+  },
+  { path: 'sports', component: SportsComponent },
+  { path: 'technology', component: TechnologyComponent },
+  { path: 'business', component: BusinessComponent },
+  { path: 'contacts', component: ContactsComponent },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
 
-  {path:'**',component:NotFoundComponent},
+  { path: 'reading', component: ContactsComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

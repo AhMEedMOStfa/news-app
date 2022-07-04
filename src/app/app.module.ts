@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 
-
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/htt
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -17,6 +16,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { ManchetComponent } from './components/reusable/manchet/manchet.component';
 import { BusinessComponent } from './components/pages/business/business.component';
 import { InterceptorService } from './Services/interceptor.service';
+import { ReadingComponent } from './reading/reading.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +31,9 @@ import { InterceptorService } from './Services/interceptor.service';
     NotFoundComponent,
     ManchetComponent,
     BusinessComponent,
+    ReadingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],
