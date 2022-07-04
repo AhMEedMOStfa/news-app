@@ -6,20 +6,21 @@ import { ApiPoliticsService } from 'src/app/Services/api-news.service';
 @Component({
   selector: 'app-politics',
   templateUrl: './politics.component.html',
-  styleUrls: ['./politics.component.css']
+  styleUrls: ['./politics.component.css'],
 })
 export class PoliticsComponent implements OnInit {
-
-  politicsNews:any;
-  newsCategory:any;
-  constructor(private activateRoute:ActivatedRoute, private apiPolitics:ApiPoliticsService) { }
+  politicsNews: News[] = [];
+  newsCategory: string = '';
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private apiPolitics: ApiPoliticsService
+  ) {}
 
   ngOnInit(): void {
-    this.newsCategory = this.activateRoute.snapshot.routeConfig?.path;
+    this.newsCategory = this.activateRoute.snapshot.routeConfig?.path!;
     console.log(this.newsCategory);
-    this.apiPolitics.getData(this.newsCategory).subscribe((manchet)=>{
-      this.politicsNews=manchet.articles;      
-    })
+    this.apiPolitics.getData(this.newsCategory).subscribe((manchet) => {
+      this.politicsNews = manchet.articles;
+    });
   }
-
 }

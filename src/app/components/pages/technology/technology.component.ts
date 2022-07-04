@@ -6,21 +6,22 @@ import { ApiPoliticsService } from 'src/app/Services/api-news.service';
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.css']
+  styleUrls: ['./technology.component.css'],
 })
 export class TechnologyComponent implements OnInit {
+  techonolgy: News[] = [];
+  newsCategory: string = '';
 
-  techonolgy: any;
-  newsCategory:string|undefined;
-
-  constructor(private activeRouter:ActivatedRoute , private apiNews:ApiPoliticsService ) { }
+  constructor(
+    private activeRouter: ActivatedRoute,
+    private apiNews: ApiPoliticsService
+  ) {}
 
   ngOnInit(): void {
-    this.newsCategory = this.activeRouter.snapshot.routeConfig?.path;
-    this.apiNews.getData(this.newsCategory).subscribe((manchet)=> {
-      this.techonolgy = manchet.articles
-      console.log( this.techonolgy)
-    })
+    this.newsCategory = this.activeRouter.snapshot.routeConfig?.path!;
+    this.apiNews.getData(this.newsCategory).subscribe((manchet) => {
+      this.techonolgy = manchet.articles;
+      console.log(this.techonolgy);
+    });
   }
-
 }
