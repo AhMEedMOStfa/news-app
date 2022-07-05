@@ -19,7 +19,7 @@ export class PoliticsComponent implements OnInit {
   ngOnInit(): void {
     this.newsCategory = this.activateRoute.snapshot.routeConfig?.path!;
     console.log(this.newsCategory);
-    this.apiPolitics.getData(this.newsCategory).subscribe((manchet) => {
+    this.apiPolitics.getData(this.newsCategory , "us").subscribe((manchet) => {
       this.politicsNews = manchet.articles;
     });
   }

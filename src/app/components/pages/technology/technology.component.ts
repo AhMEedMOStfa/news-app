@@ -21,7 +21,7 @@ export class TechnologyComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsCategory = this.activeRouter.snapshot.routeConfig?.path!;
-    this.apiNews.getData(this.newsCategory).subscribe((manchet) => {
+    this.apiNews.getData(this.newsCategory , "eg").subscribe((manchet) => {
       this.techonolgy = manchet.articles;
       console.log(this.techonolgy);
     });

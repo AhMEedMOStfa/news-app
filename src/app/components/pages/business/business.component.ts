@@ -19,7 +19,7 @@ export class BusinessComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsCategory = this.activeRouter.snapshot.routeConfig?.path!;
-    this.apiNews.getData(this.newsCategory).subscribe((manchet) => {
+    this.apiNews.getData(this.newsCategory , "us").subscribe((manchet) => {
       this.business = manchet.articles;
     });
   }
