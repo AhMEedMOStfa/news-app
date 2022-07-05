@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { News } from 'src/app/interface/news';
-import { ApiPoliticsService } from 'src/app/Services/api-news.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 
 @Component({
   selector: 'app-politics',
@@ -9,18 +7,13 @@ import { ApiPoliticsService } from 'src/app/Services/api-news.service';
   styleUrls: ['./politics.component.css'],
 })
 export class PoliticsComponent implements OnInit {
-  politicsNews: News[] = [];
-  newsCategory: string = '';
+
   constructor(
-    private activateRoute: ActivatedRoute,
-    private apiPolitics: ApiPoliticsService
+    public loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {
-    this.newsCategory = this.activateRoute.snapshot.routeConfig?.path!;
-    console.log(this.newsCategory);
-    this.apiPolitics.getData(this.newsCategory , "us").subscribe((manchet) => {
-      this.politicsNews = manchet.articles;
-    });
-  }
+
+ 
+}
 }

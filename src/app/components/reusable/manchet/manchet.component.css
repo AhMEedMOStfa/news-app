@@ -21,5 +21,25 @@ i {
 }
 
 .manchet-img {
-  height: 210px;
+  height: 250px;
+}
+
+.img-cont
+{
+  overflow: hidden;
+}
+
+
+.news-card:hover img
+{
+  transform: scale(1.2);
+  transition: all .8s;
+} 
+
+@media (min-width:720px) and (max-width:1200px) {
+  .manchet-img 
+  {
+    height: 180px;
+  }
+  
 }
