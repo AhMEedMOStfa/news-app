@@ -1,0 +1,23 @@
+<div class="w-60">
+    <div class="row">
+        <h2 class="text-capitalize">{{newsCategory}}</h2>
+        <div class="col-md-12">
+            <div class="header-data shadow">
+                <img src={{usaNews[5].urlToImage}} class="w-60"  alt="">
+                <div class="header-title p-4">
+                    <h4>{{usaNews[5].title}}</h4>
+                    <p>{{usaNews[5].content}}</p>
+                </div>
+            </div>
+        </div>
+        <h2>France</h2>
+        <div class="col-md-6 " *ngFor="let manchetfr of franceNews">
+            <app-manchet [manchetData] = 'manchetfr'></app-manchet>
+        </div>
+        <h2>USA</h2>
+        <div class="col-lg-4 col-md-6  text-center" *ngFor="let manchetus of usaNews">
+            <app-manchet [manchetData] = 'manchetus'></app-manchet>
+        </div>
+   
+    </div>
+</div>
