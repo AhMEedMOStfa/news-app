@@ -27,7 +27,7 @@
               This field is required !
             </p>
             <p
-              class="bg-warning text-white col-5 rounded-1 px-3 py-2 mt-2"
+              class="text-danger"
               *ngIf="loginForm.controls['email'].errors?.['pattern']"
             >
               This is not a correct e-mail address !
@@ -36,7 +36,7 @@
         </div>
 
         <div class="input-box">
-          <span class="details">Username</span>
+          <span class="details">Password</span>
           <input
             formControlName="password"
             name="password"
@@ -149,3 +149,4 @@
     <a class="text-decoration-none" routerLink="/auth/register">Register</a>
   </p>
 </div> -->
+gi
