@@ -1,9 +1,12 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-3" *ngFor="let manchet of techonolgy">
-            <app-manchet [manchetData] = 'manchet'></app-manchet>
-        </div>
-    </div>
+  <div *ngIf="loaderService.isLoading | async; else notLoading" class="loader">
+
+  </div>
 </div>
 
-
+<ng-template #notLoading>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let manchet of techonolgy">
+      <app-manchet [manchetData]="manchet"></app-manchet>
+    </div></div
+></ng-template>
