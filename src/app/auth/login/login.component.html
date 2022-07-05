@@ -27,7 +27,7 @@
               This field is required !
             </p>
             <p
-              class="bg-warning text-white col-5 rounded-1 px-3 py-2 mt-2"
+              class="text-danger"
               *ngIf="loginForm.controls['email'].errors?.['pattern']"
             >
               This is not a correct e-mail address !
@@ -36,7 +36,7 @@
         </div>
 
         <div class="input-box">
-          <span class="details">Username</span>
+          <span class="details">Password</span>
           <input
             formControlName="password"
             name="password"
@@ -76,76 +76,3 @@
   </div>
 </div>
 
-<!-- 
-<div class="loginContainer">
-  <h2 class="headTitle text-center mb-5 pt-3">Login Page</h2>
-  <form
-    class="container bg-light rounded-1 mx-auto my-6 p-5"
-    [formGroup]="loginForm"
-    (ngSubmit)="submitForm()"
-  >
-    <div class="mb-3">
-      <label for="email-address" class="form-label">Email address</label>
-      <input
-        formControlName="email"
-        type="email"
-        class="form-control py-3"
-        id="email-info"
-        aria-describedby="email-info"
-        placeholder="Email-Adress"
-      />
-      <div
-        *ngIf="
-          !loginForm.controls['email'].valid &&
-          loginForm.controls['email'].touched
-        "
-      >
-        <p
-          class="bg-warning text-white col-4 rounded-1 px-3 py-2 mt-2"
-          *ngIf="loginForm.controls['email'].errors?.['required']"
-        >
-          This field is required !
-        </p>
-        <p
-          class="bg-warning text-white col-5 rounded-1 px-3 py-2 mt-2"
-          *ngIf="loginForm.controls['email'].errors?.['pattern']"
-        >
-          This is not a correct e-mail address !
-        </p>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input
-        formControlName="password"
-        name="password"
-        type="password"
-        class="form-control py-3"
-        id="pass-info"
-        placeholder="Password"
-      />
-      <div
-        *ngIf="
-          !loginForm.controls['password'].valid &&
-          loginForm.controls['password'].touched
-        "
-      >
-        <p
-          class="bg-warning text-white col-4 rounded-1 px-3 py-2 mt-2"
-          *ngIf="loginForm.controls['password'].errors?.['required']"
-        >
-          This field is required !
-        </p>
-      </div>
-    </div>
-    <button type="submit" (click)="checkAuth()" class="btn btn-primary">
-      Log-In
-    </button>
-  </form>
-</div>
-<div class="mx-auto container col-4 text-center py-4">
-  <p>
-    Don't have account?
-    <a class="text-decoration-none" routerLink="/auth/register">Register</a>
-  </p>
-</div> -->
