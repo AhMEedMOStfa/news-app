@@ -1,190 +1,173 @@
-<form
-  class="row g-3 my-5"
-  [formGroup]="registerForm"
-  (ngSubmit)="submitRegister(registerForm)"
->
+<div class="container mx-auto my-5">
+  <div class="title">Registration</div>
+  <div class="content">
+    <form [formGroup]="registerForm" (ngSubmit)="submitRegister(registerForm)">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">first Name</span>
+          <input
+            type="text"
+            class="form-control"
+            id="fName"
+            name="name"
+            formControlName="registerName"
+          />
+          <div
+            *ngIf="
+              showErrors ||
+              (!controlValidation['registerName'].valid &&
+                controlValidation['registerName'].touched)
+            "
+          >
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerName'].errors?.['required']"
+            >
+              first name is required
+            </p>
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerName'].errors?.['pattern']"
+            >
+              first name should have only string and no space
+            </p>
+          </div>
+        </div>
 
+        <div class="input-box">
+          <span class="details">last Name</span>
+          <input
+            type="text"
+            class="form-control"
+            id="lName"
+            name="name"
+            formControlName="registerLastName"
+          />
+          <div
+            *ngIf="
+              showErrors ||
+              (!controlValidation['registerLastName'].valid &&
+                controlValidation['registerLastName'].touched)
+            "
+          >
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerLastName'].errors?.['required']"
+            >
+              last name is required
+            </p>
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerLastName'].errors?.['pattern']"
+            >
+              last name should have only string and no space
+            </p>
+          </div>
+        </div>
 
+        <div class="input-box">
+          <span class="details">Username</span>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            name="userName"
+            formControlName="registerUserName"
+          />
+          <div
+            *ngIf="
+              showErrors ||
+              (!controlValidation['registerUserName'].valid &&
+                controlValidation['registerUserName'].touched)
+            "
+          >
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerUserName'].errors?.['required']"
+            >
+              user name is required
+            </p>
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerUserName'].errors?.['pattern']"
+            >
+              username should have no spaces
+            </p>
+          </div>
+        </div>
 
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            formControlName="registerEmail"
+          />
+          <div
+            *ngIf="
+              showErrors ||
+              (!controlValidation['registerEmail'].valid &&
+                controlValidation['registerEmail'].touched)
+            "
+          >
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerEmail'].errors?.['required']"
+            >
+              email is required
+            </p>
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerEmail'].errors?.['pattern']"
+            >
+              email is not valid
+            </p>
+          </div>
+        </div>
 
-  <div class="col-12 mx-auto w-50 border p-5">
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            formControlName="registerPassword"
+          />
+          <div
+            *ngIf="
+              showErrors ||
+              (!registerForm.controls['registerPassword'].valid &&
+                registerForm.controls['registerPassword'].touched)
+            "
+          >
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerPassword'].errors?.['required']"
+            >
+              password required
+            </p>
+            <p
+              class="text-danger"
+              *ngIf="controlValidation['registerPassword'].errors?.['pattern']"
+            >
+              password is not valid (shuld hav.....)
+            </p>
+          </div>
+        </div>
 
-
-
-    <div class="col-auto mt-3">
-      <label for="staticEmail2">first name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="fName"
-        name="name"
-        formControlName="registerName"
-      />
-      <div
-        *ngIf="
-          showErrors ||
-          (!controlValidation['registerName'].valid &&
-            controlValidation['registerName'].touched)
-        "
-      >
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerName'].errors?.['required']"
-        >
-          first name is required
-        </p>
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerName'].errors?.['pattern']"
-        >
-          first name should have only string and no space
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="col-auto mt-3">
-      <label for="staticEmail2">last name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="lName"
-        name="name"
-        formControlName="registerLastName"
-      />
-      <div
-        *ngIf="
-          showErrors ||
-          (!controlValidation['registerLastName'].valid &&
-            controlValidation['registerLastName'].touched)
-        "
-      >
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerLastName'].errors?.['required']"
-        >
-          last name is required
-        </p>
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerLastName'].errors?.['pattern']"
-        >
-          last name should have only string and no space
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="col-auto mt-3">
-      <label for="staticEmail2">Email</label>
-      <input
-        type="text"
-        class="form-control"
-        id="email"
-        name="email"
-        formControlName="registerEmail"
-      />
-      <div
-        *ngIf="
-          showErrors ||
-          (!controlValidation['registerEmail'].valid &&
-            controlValidation['registerEmail'].touched)
-        "
-      >
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerEmail'].errors?.['required']"
-        >
-          email is required
-        </p>
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerEmail'].errors?.['pattern']"
-        >
-          email is not valid
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="col-auto mt-3">
-      <label for="staticEmail2">user-name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="userName"
-        name="userName"
-        formControlName="registerUserName"
-      />
-      <div
-        *ngIf="
-          showErrors ||
-          (!controlValidation['registerUserName'].valid &&
-            controlValidation['registerUserName'].touched)
-        "
-      >
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerUserName'].errors?.['required']"
-        >
-          user name is required
-        </p>
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerUserName'].errors?.['pattern']"
-        >
-          username should have no spaces
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="col-auto mt-3">
-      <label for="inputPassword2">Password</label>
-      <input
-        type="password"
-        class="form-control"
-        id="password"
-        name="password"
-        formControlName="registerPassword"
-      />
-      <div
-        *ngIf="
-          showErrors ||
-          (!registerForm.controls['registerPassword'].valid &&
-            registerForm.controls['registerPassword'].touched)
-        "
-      >
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerPassword'].errors?.['required']"
-        >
-          password required
-        </p>
-        <p
-          class="text-danger"
-          *ngIf="controlValidation['registerPassword'].errors?.['pattern']"
-        >
-          password is not valid (shuld hav.....)
-        </p>
-      </div>
-    </div>
-
-
-    <div class="col-auto mt-3">
-      <label for="inputPassword2">confirm-pawoord</label>
-      <input
-        type="password"
-        class="form-control"
-        id="confirmPassword"
-        name="confirmPassword"
-        formControlName="registerConfirmPassword"
-      />
-      <div
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            name="confirmPassword"
+            formControlName="registerConfirmPassword"
+          />
+          <div
         *ngIf="
           showErrors ||
           (!registerForm.controls['registerConfirmPassword'].valid &&
@@ -204,34 +187,24 @@
           confirm password is not mach password
         </p>
       </div>
-    </div>
+        </div>
+      </div>
 
-
-
-    <div class="col-auto mt-3">
-      <button
+      <div class="button">
+        <button
         type="submit"
         class="btn btn-primary mb-3"
         [disabled]="!registerForm.valid"
       >
         register
       </button>
-    </div>
-
-    
-    <div class="mx-auto container col-4 text-center py-2">
-      <p>
+      <p class="text-center">
         have account already
 
         <a class="text-decoration-none" routerLink="/auth/login">login</a>
       </p>
-    </div>
-
-
-
-
+      </div>
+    </form>
   </div>
+</div>
 
-
-
-</form>
