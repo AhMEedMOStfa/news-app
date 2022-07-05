@@ -1,22 +1,16 @@
-<div class="container">
-  <div class="row">
+<div class="container my-5">
+  <div *ngIf="readingList.length>0" class="row">
     <div class="col-md-3" *ngFor="let news of readingList let i = index">
       <div class="card shadow rounded my-3" style="width: 18rem">
         <a class="text-decoration-none" href="{{ news.url }}" target="_blank">
-          <!-- <div class="card-body">
-            <h5 class="card-title">{{ news.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{news.title}}</h6>
-            <p class="card-text">{{news.description}}</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
+
           <div class="news-card">
             <img
               src="{{ news.urlToImage }}"
               class="manchet-img card-img-top"
               alt="#"
             />
-            <div >
+            <div class="card-text">
               <h5 class="mx-4 my-2">{{ news.title }}</h5>
               <div class="d-flex justify-content-between mx-4">
                 <p>{{ news.publishedAt | date: "short" }}</p>
@@ -27,5 +21,8 @@
         <button class="btn btn-success w-25 mx-4 mb-3" (click)="removeFromList(i)">Finish</button>
       </div>
     </div>
+  </div>
+  <div *ngIf="readingList.length==0" class="d-flex justify-content-center my-5 py-5">
+    <h2>Oops...., There is no thing to preview.</h2>
   </div>
 </div>

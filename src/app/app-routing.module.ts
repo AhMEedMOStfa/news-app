@@ -14,11 +14,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   {
-    path: 'politics',
-    component: PoliticsComponent,
-    canActivate: [AuthenticationGuard],
+    path: 'politics', component: PoliticsComponent, canActivate: [AuthenticationGuard],
   },
-  { path: 'sports', component: SportsComponent },
+  { path: 'sports', component: SportsComponent, canActivate: [AuthenticationGuard] },
   { path: 'technology', component: TechnologyComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'contacts', component: ContactsComponent },

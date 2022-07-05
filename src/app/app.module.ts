@@ -19,6 +19,7 @@ import { InterceptorService } from './Services/interceptor.service';
 import { ReadingComponent } from './components/pages/reading/reading.component';
 import { StoreModule } from '@ngrx/store';
 import { readingListReducer } from './store/reading-list.reducer';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { readingListReducer } from './store/reading-list.reducer';
     ManchetComponent,
     BusinessComponent,
     ReadingComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
