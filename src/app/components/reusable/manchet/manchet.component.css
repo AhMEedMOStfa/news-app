@@ -1,28 +1,25 @@
-
-.card-text h5 { 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 50x;
+.card-text h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 50x;
 }
 
-a , p 
-{
-    color: black;
-
+a,
+p {
+  color: black;
 }
 
-
-i 
-{
-    color: #FFD700 ; 
-    font-size: 1.2rem;
-  
+i {
+  color: #ffd700;
+  font-size: 1.2rem;
 }
 
+.i-selected {
+  background-color: #ffd700;
+}
 
-.manchet-img 
-{
-    height: 210px;
+.manchet-img {
+  height: 210px;
 }

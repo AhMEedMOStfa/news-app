@@ -16,7 +16,9 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { ManchetComponent } from './components/reusable/manchet/manchet.component';
 import { BusinessComponent } from './components/pages/business/business.component';
 import { InterceptorService } from './Services/interceptor.service';
-import { ReadingComponent } from './reading/reading.component';
+import { ReadingComponent } from './components/pages/reading/reading.component';
+import { StoreModule } from '@ngrx/store';
+import { readingListReducer } from './store/reading-list.reducer';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,12 @@ import { ReadingComponent } from './reading/reading.component';
     BusinessComponent,
     ReadingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({ readingList: readingListReducer }),
+  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],

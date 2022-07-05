@@ -1,3 +1,4 @@
+import { ReadingComponent } from './components/pages/reading/reading.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BusinessComponent } from './components/pages/business/business.component';
@@ -26,7 +27,7 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
 
-  { path: 'reading', component: ContactsComponent },
+  { path: 'reading', component: ReadingComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

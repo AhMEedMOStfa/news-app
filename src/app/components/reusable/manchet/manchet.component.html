@@ -9,7 +9,10 @@
       <h5 class="mx-4 my-2">{{ manchetData.title }}</h5>
       <div class="d-flex justify-content-between mx-4">
         <p>{{ manchetData.publishedAt | date: "short" }}</p>
-        <a (click)="addToBook($event); (false)">
+        <a
+          (click)="addToBook($event); (false)"
+          [ngClass]="inInBook ? 'i-selected' : ''"
+        >
           <i class="fa-regular fa-bookmark"></i
         ></a>
       </div>
