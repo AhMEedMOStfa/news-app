@@ -1,0 +1,48 @@
+.w-25 {
+    width: 25%;
+}
+
+.w-60 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    position: relative;
+    padding: 16px 0px;
+    transition: 0.4s all;
+    
+}
+
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+h2:hover::after
+{
+    background-color: var(--main-color);
+    transition: 0.8s all;
+}
+@media (min-width : 950px) {
+
+    .header-data {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width : 950px) {
+    .header-data img {
+        width: 100%;
+    }
+
+}

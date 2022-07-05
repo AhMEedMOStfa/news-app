@@ -20,6 +20,7 @@ import { ReadingComponent } from './components/pages/reading/reading.component';
 import { StoreModule } from '@ngrx/store';
 import { readingListReducer } from './store/reading-list.reducer';
 import { NewsPageComponent } from './components/reusable/news-page/news-page.component';
+import { WorldComponent } from './components/pages/world/world.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NewsPageComponent } from './components/reusable/news-page/news-page.com
     BusinessComponent,
     ReadingComponent,
     NewsPageComponent,
+    WorldComponent,
   ],
   imports: [
     BrowserModule,

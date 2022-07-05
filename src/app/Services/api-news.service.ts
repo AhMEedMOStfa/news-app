@@ -12,6 +12,11 @@ export class ApiPoliticsService {
       `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=ae57e2c718a444629059fa1fc20114a6`
     );
   }
+  getWorldData(): Observable<any> {
+    return this.http.get<any>(
+      `https://newsapi.org/v2/everything?q=apple&from=2022-07-04&to=2022-07-04&sortBy=popularity&apiKey=617ae74d111d494a8909056790c87399`
+    );
+  }
 
   filterData:News[]=[];
   filterManchet(apiData:News[],count:number)

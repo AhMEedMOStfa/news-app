@@ -9,6 +9,7 @@ import { PoliticsComponent } from './components/pages/politics/politics.componen
 import { SportsComponent } from './components/pages/sports/sports.component';
 import { TechnologyComponent } from './components/pages/technology/technology.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
+import { WorldComponent } from './components/pages/world/world.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: 'technology', component: TechnologyComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'world', component: WorldComponent },
+
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
