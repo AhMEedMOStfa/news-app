@@ -1,22 +1,30 @@
 <form
   class="row g-3 my-5"
   [formGroup]="registerForm"
-  (ngSubmit)="submitRegister()"
+  (ngSubmit)="submitRegister(registerForm)"
 >
+
+
+
+
   <div class="col-12 mx-auto w-50 border p-5">
+
+
+
     <div class="col-auto mt-3">
       <label for="staticEmail2">first name</label>
       <input
         type="text"
         class="form-control"
-        id="name"
+        id="fName"
         name="name"
         formControlName="registerName"
       />
       <div
         *ngIf="
-          !controlValidation['registerName'].valid &&
-          controlValidation['registerName'].touched
+          showErrors ||
+          (!controlValidation['registerName'].valid &&
+            controlValidation['registerName'].touched)
         "
       >
         <p
@@ -33,19 +41,23 @@
         </p>
       </div>
     </div>
+
+
+
     <div class="col-auto mt-3">
       <label for="staticEmail2">last name</label>
       <input
         type="text"
         class="form-control"
-        id="name"
+        id="lName"
         name="name"
         formControlName="registerLastName"
       />
       <div
         *ngIf="
-          !controlValidation['registerLastName'].valid &&
-          controlValidation['registerLastName'].touched
+          showErrors ||
+          (!controlValidation['registerLastName'].valid &&
+            controlValidation['registerLastName'].touched)
         "
       >
         <p
@@ -63,6 +75,8 @@
       </div>
     </div>
 
+
+
     <div class="col-auto mt-3">
       <label for="staticEmail2">Email</label>
       <input
@@ -74,8 +88,9 @@
       />
       <div
         *ngIf="
-          !controlValidation['registerEmail'].valid &&
-          controlValidation['registerEmail'].touched
+          showErrors ||
+          (!controlValidation['registerEmail'].valid &&
+            controlValidation['registerEmail'].touched)
         "
       >
         <p
@@ -93,6 +108,8 @@
       </div>
     </div>
 
+
+
     <div class="col-auto mt-3">
       <label for="staticEmail2">user-name</label>
       <input
@@ -104,8 +121,9 @@
       />
       <div
         *ngIf="
-          !controlValidation['registerUserName'].valid &&
-          controlValidation['registerUserName'].touched
+          showErrors ||
+          (!controlValidation['registerUserName'].valid &&
+            controlValidation['registerUserName'].touched)
         "
       >
         <p
@@ -122,6 +140,9 @@
         </p>
       </div>
     </div>
+
+
+
     <div class="col-auto mt-3">
       <label for="inputPassword2">Password</label>
       <input
@@ -133,8 +154,9 @@
       />
       <div
         *ngIf="
-          !controlValidation['registerPassword'].valid &&
-          controlValidation['registerPassword'].touched
+          showErrors ||
+          (!registerForm.controls['registerPassword'].valid &&
+            registerForm.controls['registerPassword'].touched)
         "
       >
         <p
@@ -151,6 +173,8 @@
         </p>
       </div>
     </div>
+
+
     <div class="col-auto mt-3">
       <label for="inputPassword2">confirm-pawoord</label>
       <input
@@ -162,8 +186,9 @@
       />
       <div
         *ngIf="
-          !controlValidation['registerConfirmPassword'].valid &&
-          controlValidation['registerConfirmPassword'].touched
+          showErrors ||
+          (!registerForm.controls['registerConfirmPassword'].valid &&
+            registerForm.controls['registerConfirmPassword'].touched)
         "
       >
         <p
@@ -172,18 +197,17 @@
         >
           confirm password required
         </p>
+        <p
+          class="text-danger"
+          *ngIf="controlValidation['registerConfirmPassword'].errors?.['checkPasswords'] "
+        >
+          confirm password is not mach password
+        </p>
       </div>
-      <p
-        class="text-danger"
-        *ngIf="
-          controlValidation['registerConfirmPassword'].value !=
-            controlValidation['registerPassword'].value &&
-          controlValidation['registerConfirmPassword'].touched
-        "
-      >
-        confirm password is not mach password
-      </p>
     </div>
+
+
+
     <div class="col-auto mt-3">
       <button
         type="submit"
@@ -193,12 +217,21 @@
         register
       </button>
     </div>
+
+    
     <div class="mx-auto container col-4 text-center py-2">
       <p>
         have account already
-    
+
         <a class="text-decoration-none" routerLink="/auth/login">login</a>
       </p>
     </div>
+
+
+
+
   </div>
+
+
+
 </form>
