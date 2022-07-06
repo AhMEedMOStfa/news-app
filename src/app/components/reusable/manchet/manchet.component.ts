@@ -1,7 +1,8 @@
 import { News } from './../../../interface/news';
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AddtoReadingList } from 'src/app/store/reading-list.action';
+import { AddtoReadingList, removeFromReadingList } from 'src/app/store/reading-list.action';
+import { ParseFlags } from '@angular/compiler';
 
 @Component({
   selector: 'app-manchet',

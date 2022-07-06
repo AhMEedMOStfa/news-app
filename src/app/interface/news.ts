@@ -7,4 +7,5 @@ export interface News {
   content: string;
   author: string;
   inReadingList : boolean
+  index:number;
 }
