@@ -1,36 +1,40 @@
 <nav>
-  <div class="container p-2">
-    <div>
-      <ul class="nav justify-content-center mx-2">
-        <li>
-          <a routerLink="/home" routerLinkActive="activeLink">HOME</a>
-        </li>
-        <li>
-          <a routerLink="/politics" routerLinkActive="activeLink">POLITICS</a>
-        </li>
-        <li>
-          <a routerLink="/sports" routerLinkActive="activeLink">SPORTS</a>
-        </li>
-        <li>
-          <a routerLink="/technology" routerLinkActive="activeLink">TECHNOLOGY</a>
-        </li>
-       
-        <li>
-          <a routerLink="/business" routerLinkActive="activeLink">BUSINESS</a>
-          </li>
-          
+  <div class="container ">
+    <div class="d-flex align-items-center">
+      <div class="logo">
+        <a routerLink="/home" class="fs-3 dynamic-logo">Dynamic News</a>
+      </div>
+      <div>
+        <ul class="nav justify-content-center mx-5">
           <li>
-          <a routerLink="/world">WORLD</a>
+            <a routerLink="/home" class="active-anchor" routerLinkActive="activeLink">HOME</a>
           </li>
-        <li>
-          <a routerLink="/contacts" routerLinkActive="activeLink">CONTACTS</a>
-        </li>
-        <li>
-          <a routerLink="/reading" routerLinkActive="activeLink"
-            >READING <i class="mx-2 fa-regular fa-bookmark"></i
-          ></a>
-        </li>
-      </ul>
+          <li>
+            <a routerLink="/politics" class="active-anchor"  routerLinkActive="activeLink">POLITICS</a>
+          </li>
+          <li>
+            <a routerLink="/sports" class="active-anchor"  routerLinkActive="activeLink">SPORTS</a>
+          </li>
+          <li>
+            <a routerLink="/technology" class="active-anchor"  routerLinkActive="activeLink">TECHNOLOGY</a>
+          </li>
+         
+          <li>
+            <a routerLink="/business" class="active-anchor"  routerLinkActive="activeLink">BUSINESS</a>
+            </li>
+            
+            <li>
+            <a routerLink="/world" class="active-anchor" routerLinkActive="activeLink">WORLD</a>
+            </li>
+          <li>
+            <a routerLink="/contacts" class="active-anchor"  routerLinkActive="activeLink">CONTACTS</a>
+          </li>
+          <li>
+            <a routerLink="/reading" class="active-anchor"  routerLinkActive="activeLink">READING <i class="mx-2 fa-regular fa-bookmark"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
