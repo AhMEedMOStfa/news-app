@@ -1,16 +1,16 @@
 <div class="w-60">
     <div class="row">
-        <h2 class="text-capitalize">{{newsCategory}} News</h2>
+        <h2 class="text-capitalize">{{category}} News in {{country}}</h2>
         <div class="col-md-12">
             <div class="header-data shadow">
-                <img src={{worldNews[25].urlToImage}} class="w-60"  alt="">
+                <img src={{countryNews[5].urlToImage}} class="w-60"  alt="">
                 <div class="header-title p-4">
-                    <h4>{{worldNews[25].title}}</h4>
-                    <p>{{worldNews[25].content}}</p>
+                    <h4>{{countryNews[5].title}}</h4>
+                    <p>{{countryNews[5].content}}</p>
                 </div>
             </div>
         </div>
-        <ng-container class="col-md-6 " *ngFor="let manchet of worldNews;let i=index">
+        <ng-container class="col-md-6 " *ngFor="let manchet of countryNews;let i=index">
             <div class="col-md-6" *ngIf="i<6">
                 <app-manchet [manchetData]="manchet"></app-manchet>
             </div>

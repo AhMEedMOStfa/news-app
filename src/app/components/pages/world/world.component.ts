@@ -8,20 +8,10 @@ import { ApiPoliticsService } from 'src/app/Services/api-news.service';
   styleUrls: ['./world.component.css']
 })
 export class WorldComponent implements OnInit {
-  worldNews:Array<News>=[];
-
-  constructor(private apiNews:ApiPoliticsService) {
+  constructor() {
    }
   
 
   ngOnInit(): void {
-    this.apiNews.getWorldData().subscribe((worldData)=>{
-      this.worldNews=worldData.articles
-      console.log(worldData);
-      console.log(this.worldNews)
-    })
-
   }
-
-
 }

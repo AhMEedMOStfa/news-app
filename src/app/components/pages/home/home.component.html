@@ -1,2 +1,9 @@
-<p>home works!</p>
 
+
+<h5>PrimeNG dropdowm component</h5>
+<p-dropdown class="p-5" [options]="countries" placeholder="Country" optionLabel="name" [(ngModel)]="country" filterBy="name">
+        
+</p-dropdown>
+<p-dropdown class="p-5" [options]="categories" placeholder="Category" optionLabel="name" [(ngModel)]="category" filterBy="name">
+</p-dropdown>
+<button pButton type="button" label="Search" icon="pi pi-search" (click)="onSubmit()" iconPos="right"></button>
