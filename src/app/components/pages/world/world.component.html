@@ -1,0 +1,29 @@
+
+<div class="w-60">
+    <div class="row">
+        <h2 class="text-capitalize">Top new</h2>
+        <div class="col-md-12">
+            <div class="header-data shadow">
+                <img src={{worldNews[5].urlToImage}} class="w-60"  alt="">
+                <div class="header-title p-4">
+                    <h4>{{worldNews[5].title}}</h4>
+                    <p>{{worldNews[5].content}}</p>
+                </div>
+            </div>
+        </div>
+        <h2>All news</h2>
+        <ng-container class="col-md-6 " *ngFor="let manchet of worldNews;let i=index">
+            <div class="col-md-6" *ngIf="i<6">
+                <app-manchet [manchetData]="manchet"></app-manchet>
+            </div>
+            <div class="col-md-4" *ngIf=" i>6  && i<13">
+                <app-manchet [manchetData]="manchet"></app-manchet>
+            </div>
+            <div class="col-md-6" *ngIf="i>13 && i<22">
+                <app-manchet [manchetData]="manchet"></app-manchet>
+            </div>
+        </ng-container>
+   
+    </div>
+</div>
+

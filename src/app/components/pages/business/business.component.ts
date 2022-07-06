@@ -1,7 +1,5 @@
-import { News } from 'src/app/interface/news';
 import { Component, OnInit } from '@angular/core';
-import { ApiPoliticsService } from 'src/app/Services/api-news.service';
-import { ActivatedRoute } from '@angular/router';
+import { LoaderService } from 'src/app/Services/loader.service';
 
 @Component({
   selector: 'app-business',
@@ -9,18 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./business.component.css'],
 })
 export class BusinessComponent implements OnInit {
-  business: News[] = [];
-  newsCategory: string = '';
+
 
   constructor(
-    private activeRouter: ActivatedRoute,
-    private apiNews: ApiPoliticsService
+    public loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {
-    this.newsCategory = this.activeRouter.snapshot.routeConfig?.path!;
-    this.apiNews.getData(this.newsCategory , "us").subscribe((manchet) => {
-      this.business = manchet.articles;
-    });
+
+
   }
 }
