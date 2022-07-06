@@ -52,11 +52,12 @@
           >
             <p
               class="text-danger"
-              *ngIf="loginForm.controls['password'].errors?.['required']"
+              *ngIf="loginForm.controls?.['required']"
             >
               This field is required !
             </p>
           </div>
+          <p class="text-danger" *ngIf="notLoggedIn">You Don't Have Email</p>
         </div>
       </div>
 
@@ -66,7 +67,7 @@
         </button>
         <p class="my-2 text-center">
           Don't have account?
-          <a class="text-decoration-none" routerLink="/auth/register"
+          <a class="text-decoration-none text-dark fw-bold" routerLink="/auth/register"
             >Register</a
           >
         </p>

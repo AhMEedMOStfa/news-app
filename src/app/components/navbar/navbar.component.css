@@ -1,18 +1,30 @@
-
 nav
 {
     box-shadow: 2px 4px 5px rgb(0 0 0 / 15%);
+    background-color: #b00507;
 }
-a
+li{
+    padding: 20px 0px;
+}
+.dynamic-logo
 {
     text-decoration: none;
-    color: black;
-    padding: 10px;
-    transition: 0.2s all;
+    color: white;
+    font-weight: bolder;
 }
-a:hover,
+.active-anchor
+{
+    text-decoration: none;
+    color: white;
+    padding: 23px 16px;
+    transition: 0.2s all;
+    font-weight: 700;
+}
+.active-anchor:hover,
 .activeLink
 {
-    background-color: var(--main-color);
-    color: #fff;
+    color:#b00507;
+    background-color: white;  
 }
+
+

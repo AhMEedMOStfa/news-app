@@ -1,9 +1,12 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+//modules
 import { AppRoutingModule } from './app-routing.module';
-
+import {DropdownModule} from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ButtonModule} from 'primeng/button';
+import { FormsModule } from '@angular/forms';
+//components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.component';
@@ -23,7 +26,8 @@ import { readingListReducer } from './store/reading-list.reducer';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewsPageComponent } from './components/reusable/news-page/news-page.component';
 import { WorldComponent } from './components/pages/world/world.component';
-
+import { CountryNewsComponent } from './components/pages/country-news/country-news.component';
+import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,12 +45,18 @@ import { WorldComponent } from './components/pages/world/world.component';
     FooterComponent,
     NewsPageComponent,
     WorldComponent,
+    CountryNewsComponent,
+    TopicNewsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({ readingList: readingListReducer }),
+    DropdownModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    FormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

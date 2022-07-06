@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormArray,
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocalStorageService } from 'src/app/Services/local-storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +13,9 @@ import {
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private regForm: FormBuilder) { }
+  notLoggedIn:boolean=false;
+
+  constructor(private regForm: FormBuilder , private _localstorageService: LocalStorageService , private router:Router) { }
   
 
   loginForm:FormGroup = this.regForm.group({
@@ -29,16 +31,28 @@ export class LoginComponent implements OnInit {
       null,
       [
         Validators.required,
-        Validators.pattern(
-          /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/
-        ),
       ],
     ],
   })
 
 
   submitForm() {
-    console.log(this.loginForm);
+    if(this.loginForm.valid) 
+    {
+     let userName =  this._localstorageService.getLocalStorage(this.loginForm.value.email , this.loginForm.value.password)
+
+     if(userName) 
+     {
+      this.router.navigate(["/home"])
+
+     }
+
+     else
+     {
+      this.notLoggedIn = true;
+     }
+   
+    }
   }
 
   checkAuth() {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,Validators,FormBuilder } from '@angular/forms';
+import { LocalStorageService } from 'src/app/Services/local-storage.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
     registerConfirmPassword :["",[Validators.required]],
   },{validator:this.checkPasswords('registerPassword','registerConfirmPassword')});
 
-  constructor(private fb:FormBuilder ) { 
+  constructor(private fb:FormBuilder ,private _localstorageService: LocalStorageService ) { 
     
   }
 
@@ -25,8 +26,12 @@ export class RegisterComponent implements OnInit {
   }
   
   submitRegister(data:object){
-    console.log(this.registerForm)
     this.showErrors=true;
+    if(this.registerForm.valid) 
+    {
+      this._localstorageService.setLocalStorage(this.registerForm.value.registerEmail , this.registerForm.value.registerPassword)
+    }
+
   }
   get controlValidation(){
     return this.registerForm.controls
@@ -52,6 +57,8 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
+
+
   
 
 }

@@ -10,6 +10,7 @@ import { SportsComponent } from './components/pages/sports/sports.component';
 import { TechnologyComponent } from './components/pages/technology/technology.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { WorldComponent } from './components/pages/world/world.component';
+import { CountryNewsComponent } from './components/pages/country-news/country-news.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'business', component: BusinessComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'world', component: WorldComponent },
-
+  {path:'home/:category/:country',component:CountryNewsComponent},
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),

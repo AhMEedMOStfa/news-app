@@ -12,20 +12,12 @@ export class ApiPoliticsService {
 
   getData(category: string, country: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e78728f97924b109e483ec14ecb2d05`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}`
     );
   }
-  getWorldData(): Observable<any> {
+  getWorldData(category: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/everything?q=apple&from=2022-07-04&to=2022-07-04&sortBy=popularity`
+      `https://newsapi.org/v2/everything?q=${category}&from=2022-07-04&to=2022-07-04&sortBy=popularity`
     );
-  }
-
-  filterData: News[] = [];
-  filterManchet(apiData: News[], count: number) {
-    for (let i = 0; i < count; i++) {
-      this.filterData.push(apiData[i]);
-    }
-    return this.filterData;
   }
 }
