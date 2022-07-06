@@ -6,4 +6,5 @@ export interface News {
   publishedAt: string;
   content: string;
   author: string;
+  inReadingList : boolean
 }

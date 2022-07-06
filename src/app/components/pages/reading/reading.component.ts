@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./reading.component.css'],
 })
 export class ReadingComponent implements OnInit {
-  
+
   readingList: News[] = [];
   constructor(private store: Store<{ readingList: News[] }>) {
     store.select('readingList').subscribe((res) => {
