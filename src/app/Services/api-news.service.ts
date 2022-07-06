@@ -12,12 +12,12 @@ export class ApiPoliticsService {
 
   getData(category: string, country: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e78728f97924b109e483ec14ecb2d05`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}`
     );
   }
   getWorldData(category: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/everything?q=${category}&from=2022-07-04&to=2022-07-04&sortBy=popularity&apiKey=617ae74d111d494a8909056790c87399`
+      `https://newsapi.org/v2/everything?q=${category}&from=2022-07-04&to=2022-07-04&sortBy=popularity`
     );
   }
 }

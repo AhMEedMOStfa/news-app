@@ -1,12 +1,13 @@
+import { removeFromReadingList } from 'src/app/store/reading-list.action';
 import { News } from './../interface/news';
 import { createReducer, on } from '@ngrx/store';
-import { AddtoReadingList, removeFromReadingList } from './reading-list.action';
+import { AddtoReadingList } from './reading-list.action';
 
 export const initialState: News[] = [];
 
 export const readingListReducer = createReducer(
   initialState,
-  on(AddtoReadingList, (state, news: News) => { 
+  on(AddtoReadingList, (state, news: News) => {
     let arr = [...state];
     let found = false;
     state.forEach((e, i) => {
@@ -15,7 +16,7 @@ export const readingListReducer = createReducer(
         found = true;
       }
     });
-
+    
     if (found) {
       return arr;
     } else {
@@ -23,10 +24,9 @@ export const readingListReducer = createReducer(
       return state;
     }
   }),
-  on(removeFromReadingList, (state, {index}) => {
+  on(removeFromReadingList, (state, { index }) => {
     state = [...state];
     state.splice(index, 1);
     return state;
   })
-  
 );
