@@ -12,7 +12,7 @@ export class ApiPoliticsService {
 
   getData(category: string, country: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=617ae74d111d494a8909056790c87399`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e78728f97924b109e483ec14ecb2d05`
     );
   }
   getWorldData(category: string): Observable<any> {

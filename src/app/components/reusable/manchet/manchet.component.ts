@@ -19,13 +19,15 @@ export class ManchetComponent implements OnInit {
       this.readingList = res;
     });
 
+   
+  }
+
+  ngOnInit(): void {
     if (!this.manchetData.urlToImage) {
       this.manchetData.urlToImage =
         'https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640';
     }
-  }
-
-  ngOnInit(): void {
+    
     let found = this.readingList.findIndex((e) => {
       return e.title == this.manchetData.title;
     });
@@ -50,4 +52,5 @@ export class ManchetComponent implements OnInit {
       this.manchetData.inReadingList = false;
     }
   }
+  
 }

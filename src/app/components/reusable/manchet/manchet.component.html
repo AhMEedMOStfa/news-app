@@ -4,7 +4,7 @@
       <img
         src="{{ manchetData.urlToImage }}"
         class="manchet-img card-img-top"
-        alt="#"
+        alt=""
       />
     </div>
     <div class="card-text">
@@ -13,10 +13,12 @@
         <p>{{ manchetData.publishedAt | date: "short" }}</p>
         <a
           (click)="addToBook($event); (false)"
-          [ngClass]="manchetData.inReadingList ? 'i-selected' : ''"
-          class=""
         >
-          <i class="fa-regular fa-bookmark p-1"></i>
+          <i *ngIf="!manchetData.inReadingList ; else selected"  class="fa-regular fa-bookmark px-3 py-1"></i>
+
+          <ng-template #selected> 
+            <i class="fa-solid fa-bookmark px-3 py-1"></i>
+          </ng-template>
         </a>
       </div>
     </div>
