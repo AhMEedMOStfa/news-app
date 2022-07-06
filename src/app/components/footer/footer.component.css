@@ -1,4 +1,21 @@
-.khaled {
-    background-color: #f8002f;
-background-image: linear-gradient(326deg, #f8002f 0%, #000c14 74%);
+
+body 
+{
+    font-family: "Raleway", sans-serif;
+}
+
+h6 
+{
+    font-family: "Open Sans", sans-serif !important; 
+}
+
+
+.footer-bg {
+    background-color:rgb(97, 2, 2) ;
+    background-image: linear-gradient(326deg, rgb(111, 2, 2) 0%, #180000 50%);
+}
+
+a 
+{
+    text-decoration: none;
 }

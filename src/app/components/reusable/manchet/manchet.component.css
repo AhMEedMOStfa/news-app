@@ -6,18 +6,21 @@
   height: 50px;
 }
 
+.news-card:hover .card-text h5 
+{
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+
 a,
 p {
   color: black;
 }
 
 i {
-  color: #ffd700;
-  font-size: 1.2rem;
-}
-
-.i-selected {
-  background-color: #ffd700;
+  color: var(--main-color);
+  font-size: 1.4rem;
 }
 
 .manchet-img {
@@ -35,6 +38,7 @@ i {
   transform: scale(1.2);
   transition: all .8s;
 } 
+
 
 @media (min-width:720px) and (max-width:1200px) {
   .manchet-img 
