@@ -17,7 +17,7 @@ body {
   z-index: 10;
   height: 70vh;
 
-  background-image: url("../assets/images/loading.gif");
+  /* background-image: url("../assets/images/loading.gif"); */
   background-position: center center;
 
   background-size: contain;
@@ -37,3 +37,4 @@ h6 {
 p {
   font-family: "Open Sans", sans-serif;
 }
+

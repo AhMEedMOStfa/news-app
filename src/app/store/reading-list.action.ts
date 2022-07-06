@@ -5,3 +5,7 @@ export const AddtoReadingList = createAction(
   '[Reading] AddtoReadingList',
   props<News>()
 );
+export const removeFromReadingList = createAction(
+  'Remove manchet',
+  props<{ index: number }>()
+);

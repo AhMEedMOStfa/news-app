@@ -13,3 +13,6 @@ img
 {
     width:80%;
 }
+.activeLinkText{
+    color: red;
+  }
