@@ -18,6 +18,13 @@ export class InterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     this.loaderService.isLoading.next(true);
+    //'ae57e2c718a444629059fa1fc20114a6'
+    req = req.clone({
+      setParams: {
+        language: 'fr',
+        apiKey: '617ae74d111d494a8909056790c87399',
+      },
+    });
     return next.handle(req).pipe(
       finalize(() => {
         this.loaderService.isLoading.next(false);
