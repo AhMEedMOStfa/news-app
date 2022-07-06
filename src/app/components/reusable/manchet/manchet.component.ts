@@ -12,23 +12,42 @@ import { ParseFlags } from '@angular/compiler';
 export class ManchetComponent implements OnInit {
   @Input() manchetData: News = {} as News;
 
-  inInBook: boolean = false;
+  readingList: News[] = [];
 
-  
   constructor(private store: Store<{ readingList: News[] }>) {
+    store.select('readingList').subscribe((res) => {
+      this.readingList = res;
+    });
+
+    if (!this.manchetData.urlToImage) {
+      this.manchetData.urlToImage =
+        'https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640';
+    }
   }
-  
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    let found = this.readingList.findIndex((e) => {
+      return e.title == this.manchetData.title;
+    });
+
+    if (found != -1) {
+      this.manchetData.inReadingList = true;
+    } else {
+      this.manchetData.inReadingList = false;
+    }
+  }
 
   addToBook(e: any) {
     e.stopPropagation();
-    if (!this.inInBook) {
-      this.store.dispatch(AddtoReadingList(this.manchetData));
-      this.inInBook = true;
+    this.store.dispatch(AddtoReadingList(this.manchetData));
+    let found = this.readingList.findIndex((e) => {
+      return e.title == this.manchetData.title;
+    });
+
+    if (found != -1) {
+      this.manchetData.inReadingList = true;
     } else {
-      this.store.dispatch(removeFromReadingList(this.manchetData));
-      this.inInBook = false;
+      this.manchetData.inReadingList = false;
     }
-    console.log(this.inInBook)
   }
 }

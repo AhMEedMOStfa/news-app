@@ -9,7 +9,7 @@ import { removeFromReadingList } from 'src/app/store/reading-list.action';
   styleUrls: ['./reading.component.css'],
 })
 export class ReadingComponent implements OnInit {
-  
+
   readingList: News[] = [];
   constructor(private store: Store<{ readingList: News[] }>) {
     store.select('readingList').subscribe((res) => {
