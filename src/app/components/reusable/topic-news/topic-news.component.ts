@@ -17,11 +17,9 @@ export class TopicNewsComponent implements OnInit {
   ngOnInit(): void {
     this.country=this._activateRouter.snapshot.paramMap.get('country');
     this.category=this._activateRouter.snapshot.paramMap.get('category');
-    console.log(this.country,this.category);
     this.apiNews.getData(this.category,this.country).subscribe((country)=>{
       this.countryNews=country.articles;
       console.log(this.countryNews);
     })
   }
-
 }

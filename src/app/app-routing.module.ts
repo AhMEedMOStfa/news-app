@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'politics', component: PoliticsComponent, canActivate: [AuthenticationGuard],
   },
-  { path: 'sports', component: SportsComponent, canActivate: [AuthenticationGuard] },
+   { path: 'sports', component: SportsComponent, canActivate: [AuthenticationGuard] },
   { path: 'technology', component: TechnologyComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'contacts', component: ContactsComponent },

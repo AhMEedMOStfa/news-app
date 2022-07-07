@@ -1,8 +1,23 @@
+.w-90
+{
+    width: 95%;
+    margin: 0 auto;
+}
 nav
 {
     box-shadow: 2px 4px 5px rgb(0 0 0 / 15%);
     background-color: #b00507;
 }
+.fixed
+{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+
+
 li{
     padding: 20px 0px;
 }
@@ -16,7 +31,7 @@ li{
 {
     text-decoration: none;
     color: white;
-    padding: 23px 16px;
+    padding: 23px 12px;
     transition: 0.2s all;
     font-weight: 700;
 }
@@ -26,5 +41,6 @@ li{
     color:#b00507;
     background-color: white;  
 }
+
 
 
