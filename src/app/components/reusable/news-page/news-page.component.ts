@@ -20,8 +20,10 @@ export class NewsPageComponent implements OnInit {
     this.newsCountry = this._activateRouter.snapshot.routeConfig?.path!;
     this.apiNews.getWorldData(this.newsCategory).subscribe((world)=> {
       this.worldNews = world.articles;
+      console.log(this.worldNews)
     }) 
- 
+
+  
     
   }
 }

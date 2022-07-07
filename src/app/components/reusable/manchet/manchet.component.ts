@@ -43,6 +43,7 @@ export class ManchetComponent implements OnInit {
     e.stopPropagation();
     this.store.dispatch(AddtoReadingList(this.manchetData));
     let found = this.readingList.findIndex((e) => {
+      console.log()
       return e.title == this.manchetData.title;
     });
 
