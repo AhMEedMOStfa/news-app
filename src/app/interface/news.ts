@@ -1,4 +1,5 @@
 export interface News {
+  inReadingList: boolean;
   url: string;
   title: string;
   description: string;
@@ -6,6 +7,5 @@ export interface News {
   publishedAt: string;
   content: string;
   author: string;
-  inReadingList : boolean
   index:number;
 }

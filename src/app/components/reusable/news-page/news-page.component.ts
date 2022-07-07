@@ -12,7 +12,7 @@ export class NewsPageComponent implements OnInit {
   worldNews:News[]=[];
   newsCategory: string = '';
   newsCountry: string = '';
-
+  imgLoad='../../../../assets/images/load.jpg';
   constructor(private _activateRouter:ActivatedRoute , private apiNews:ApiPoliticsService ) { }
 
   ngOnInit(): void {

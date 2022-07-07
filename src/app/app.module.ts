@@ -6,6 +6,9 @@ import {DropdownModule} from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { LazyLoadImageModule } from 'ng-lazyload-image'; 
+import {InputTextModule} from 'primeng/inputtext';
+
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -56,7 +59,9 @@ import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.
     DropdownModule,
     BrowserAnimationsModule,
     ButtonModule,
-    FormsModule
+    FormsModule,
+    InputTextModule,
+    LazyLoadImageModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
