@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
   users:[{}]=[{}];
+  userEmail:string = "";
   
+  constructor() {
+   
+  }
 
-  constructor() {}
+  emailSubject = new BehaviorSubject(this.userEmail)
 
   setLocalStorage(email:string , password:string) 
   {
@@ -16,6 +21,7 @@ export class LocalStorageService {
      localStorage.setItem("users" , JSON.stringify(this.users))
      
   }
+  
   
   getLocalStorage(email:string , password:string)
   {
@@ -27,13 +33,24 @@ export class LocalStorageService {
 
     if(user)
     {
-      
+      this.userEmail = email
+      this.setEmail()
       return email
-      
     }
     else 
     {
       return false
     }
+   
+  }
+
+  setEmail()
+  {
+    this.emailSubject.next(this.userEmail)
+  }
+
+  getEmail()
+  {
+   return this.emailSubject.asObservable()
   }
 }

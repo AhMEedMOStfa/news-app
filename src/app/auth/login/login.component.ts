@@ -43,8 +43,9 @@ export class LoginComponent implements OnInit {
 
      if(userName) 
      {
+      console.log(userName)
       this.router.navigate(["/home"])
-
+     
      }
 
      else
