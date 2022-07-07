@@ -17,7 +17,7 @@ export class ApiPoliticsService {
   }
   getWorldData(category: string): Observable<any> {
     return this.http.get<any>(
-      `https://newsapi.org/v2/everything?q=${category}&from=2022-07-04&to=2022-07-04&sortBy=popularity`
+      `https://newsapi.org/v2/everything?q=${category}&from=2022-07-02&to=2022-07-06&sortBy=popularity`
     );
   }
 }

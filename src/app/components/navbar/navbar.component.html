@@ -1,6 +1,6 @@
-<nav>
-  <div class="container ">
-    <div class="d-flex align-items-center">
+<nav (scroll)="onScroll()" [ngClass]="navbarMove ? 'fixed':'.not-fixed'">
+  <div class="w-90">
+    <div class="d-flex align-items-center justify-content-between">
       <div class="logo">
         <a routerLink="/home" class="fs-3 dynamic-logo">Dynamic News</a>
       </div>
@@ -35,6 +35,10 @@
           </li>
         </ul>
       </div>
+      <div class="p-input-icon-right p-input-filled">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText pInputText placeholder="Search" >         
+    </div>
     </div>
   </div>
 </nav>

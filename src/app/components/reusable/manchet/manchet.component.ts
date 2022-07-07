@@ -13,7 +13,7 @@ export class ManchetComponent implements OnInit {
   @Input() manchetData: News = {} as News;
 
   readingList: News[] = [];
-
+  imgLoad='../../../../assets/images/load (2).png';
   constructor(private store: Store<{ readingList: News[] }>) {
     store.select('readingList').subscribe((res) => {
       this.readingList = res;
@@ -23,11 +23,6 @@ export class ManchetComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.manchetData.urlToImage) {
-      this.manchetData.urlToImage =
-        'https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640';
-    }
-    
     let found = this.readingList.findIndex((e) => {
       return e.title == this.manchetData.title;
     });
