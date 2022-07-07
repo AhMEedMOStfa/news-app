@@ -4,27 +4,21 @@ import { LocalStorageService } from 'src/app/Services/local-storage.service';
 @Component({
   selector: 'app-header-navbar',
   templateUrl: './header-navbar.component.html',
-  styleUrls: ['./header-navbar.component.css']
+  styleUrls: ['./header-navbar.component.css'],
 })
 export class HeaderNavbarComponent implements OnInit {
+  email: string = '';
+  isLogin: boolean = false;
 
-  email:any;
-
-  constructor(public _userEmail:LocalStorageService) { 
-
-  }
+  constructor(public _userEmail: LocalStorageService) {}
 
   ngOnInit(): void {
-    this._userEmail.getEmail().subscribe(
-      (res:any)=>
-      {
-        this.email = res
-        console.log(this.email)
-        
-      }
-    )
+    this._userEmail.getEmail().subscribe((res: string) => {
+      this.email = res;
+    });
 
-
+    if (!this.email) {
+      this.email = this._userEmail.getState();
+    }
   }
-
 }

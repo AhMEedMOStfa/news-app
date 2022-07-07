@@ -50,15 +50,21 @@
               loginForm.controls['password'].touched
             "
           >
-            <p
-              class="text-danger"
-              *ngIf="loginForm.controls?.['required']"
-            >
+            <p class="text-danger" *ngIf="loginForm.controls?.['required']">
               This field is required !
             </p>
           </div>
           <p class="text-danger" *ngIf="notLoggedIn">You Don't Have Email</p>
         </div>
+      </div>
+      <div class="form-check text-end">
+        <input
+          type="checkbox"
+          class="m-1"
+          id="saveLogin"
+          (change)="onChange($event)"
+        />
+        <label class="form-check-label" for="saveLogin">Save Login</label>
       </div>
 
       <div class="button">
@@ -67,7 +73,9 @@
         </button>
         <p class="my-2 text-center">
           Don't have account?
-          <a class="text-decoration-none text-dark fw-bold" routerLink="/auth/register"
+          <a
+            class="text-decoration-none text-dark fw-bold"
+            routerLink="/auth/register"
             >Register</a
           >
         </p>
