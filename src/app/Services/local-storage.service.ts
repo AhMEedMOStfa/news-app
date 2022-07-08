@@ -38,9 +38,11 @@ export class LocalStorageService {
   }
 
   getState() {
-    return (
-      JSON.parse(localStorage.getItem('saveLogin')!) || 'Please Login First'
-    );
+    return JSON.parse(localStorage.getItem('saveLogin')!);
+  }
+
+  deleteState() {
+    localStorage.setItem('saveLogin', JSON.stringify(''));
   }
 
   setEmail() {

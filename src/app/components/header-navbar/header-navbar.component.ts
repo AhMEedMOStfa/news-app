@@ -21,4 +21,9 @@ export class HeaderNavbarComponent implements OnInit {
       this.email = this._userEmail.getState();
     }
   }
+
+  logout() {
+    this.email = '';
+    this._userEmail.deleteState();
+  }
 }

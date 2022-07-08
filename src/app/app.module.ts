@@ -17,7 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PoliticsComponent } from './components/pages/politics/politics.component';
 import { SportsComponent } from './components/pages/sports/sports.component';
 import { TechnologyComponent } from './components/pages/technology/technology.component';
-import { ContactsComponent } from './components/pages/contacts/contacts.component';
+
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { ManchetComponent } from './components/reusable/manchet/manchet.component';
@@ -39,7 +39,7 @@ import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.
     PoliticsComponent,
     SportsComponent,
     TechnologyComponent,
-    ContactsComponent,
+
     HomeComponent,
     NotFoundComponent,
     ManchetComponent,
