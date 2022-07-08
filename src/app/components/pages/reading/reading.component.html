@@ -1,28 +1,41 @@
 <div class="container my-5">
-  <div *ngIf="readingList.length>0" class="row">
-    <div class="col-md-3" *ngFor="let news of readingList let i = index">
-      <div class="card shadow rounded my-3" style="width: 18rem">
+  <div *ngIf="readingList.length > 0; else showBtnViewNews" class="row">
+    <div class="col-md-6" *ngFor="let news of readingList; let i = index">
+      <div class="card shadow rounded my-3">
         <a class="text-decoration-none" href="{{ news.url }}" target="_blank">
-
-          <div class="news-card">
+          <div class="news-card row">
             <img
               src="{{ news.urlToImage }}"
-              class="manchet-img card-img-top"
+              class="manchet-img col card-img-top w-25"
               alt="#"
             />
-            <div class="card-text">
-              <h5 class="mx-4 my-2">{{ news.title }}</h5>
-              <div class="d-flex justify-content-between mx-4">
-                <p>{{ news.publishedAt | date: "short" }}</p>
-              </div>
+            <div class="col">
+              <h5 class="my-2">{{ news.title }}</h5>
+              <p>{{ news.content }}</p>
+            </div>
+
+            <div class="d-flex justify-content-between my-3">
+              <p class="col ms-3">{{ news.publishedAt | date: "short" }}</p>
+              <span *ngIf="news.readed" class="col text-end me-4">✅</span>
             </div>
           </div>
         </a>
-        <button class="btn btn-success w-25 mx-4 mb-3" (click)="removeFromList(i)">Finish</button>
+        <div class="row gap-3 mx-2">
+          <button class="Btn col mb-3" (click)="removeFromList(i)">
+            Remove
+          </button>
+          <button class="BtnGreen col mb-3" (click)="markAsRead(i)">
+            Mark as read
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div *ngIf="readingList.length==0" class="d-flex justify-content-center my-5 py-5">
-    <h2>Oops...., There is no thing to preview.</h2>
-  </div>
+
+  <ng-template #showBtnViewNews>
+    <div class="text-center my-5 py-5">
+      <h2>There Is No News To Read.</h2>
+      <button class="Btn w-25 mt-4" routerLink="/home">Go To News</button>
+    </div>
+  </ng-template>
 </div>

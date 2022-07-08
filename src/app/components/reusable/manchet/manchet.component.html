@@ -1,27 +1,30 @@
 <a class="text-decoration-none" href="{{ manchetData.url }}" target="_blank">
-    <div class="news-card shadow rounded my-3">
-      <div class="img-cont">
-        <img
-          class="manchet-img card-img-top"
-          [lazyLoad]="manchetData.urlToImage"
-          [src]="imgLoad"
-          alt=""
-        />
-      </div>
-      <div class="card-text">
-        <h5 class="mx-4 my-2">{{ manchetData.title }}</h5>
-        <div class="d-flex justify-content-between mx-4">
-          <p>{{ manchetData.publishedAt | date: "short" }}</p>
-          <a
-            (click)="addToBook($event); (false)"
-          >
-            <i *ngIf="!manchetData.inReadingList ; else selected"  class="fa-regular fa-bookmark px-3 py-1"></i>
-  
-            <ng-template #selected> 
-              <i class="fa-solid fa-bookmark px-3 py-1"></i>
-            </ng-template>
-          </a>
-        </div>
+  <div class="news-card shadow rounded my-3">
+    <div class="img-cont">
+      <img
+        class="manchet-img card-img-top"
+        [lazyLoad]="manchetData.urlToImage"
+        [src]="imgLoad"
+        alt=""
+      />
+    </div>
+    <div class="card-text">
+      <h5 class="mx-4 my-2">{{ manchetData.title }}</h5>
+      <div class="d-flex justify-content-between mx-4">
+        <p>{{ manchetData.publishedAt | date: "short" }}</p>
+        <span *ngIf="manchetData.readed" class="col text-end me-4">✅</span>
+
+        <a (click)="addToBook($event); (false)">
+          <i
+            *ngIf="!manchetData.inReadingList; else inReadingList"
+            class="fa-regular fa-bookmark px-3 py-1"
+          ></i>
+
+          <ng-template #inReadingList>
+            <i class="fa-solid fa-bookmark px-3 py-1"></i>
+          </ng-template>
+        </a>
       </div>
     </div>
+  </div>
 </a>

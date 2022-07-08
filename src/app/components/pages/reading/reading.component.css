@@ -1,26 +1,44 @@
-.card-text h5 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 50px;
-  }
-  
-  a,
-  p {
-    color: black;
-  }
-  
-  i {
-    color: #ffd700;
-    font-size: 1.2rem;
-  }
-  
-  .i-selected {
-    background-color: #ffd700;
-  }
-  
-  .manchet-img {
-    height: 210px;
-  }
-  
+.news-card {
+  height: 350px;
+}
+
+a,
+p {
+  color: black;
+}
+
+.Btn {
+  height: 45px;
+
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, black, red);
+}
+.Btn:hover {
+  transform: scale(0.99);
+  background: linear-gradient(-135deg, black, red);
+}
+
+.BtnGreen {
+  height: 45px;
+
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(-135deg, black, green);
+}
+.BtnGreen:hover {
+  transform: scale(0.99);
+  background: linear-gradient(135deg, black, green);
+}

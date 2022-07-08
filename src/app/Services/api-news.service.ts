@@ -8,8 +8,6 @@ import { News } from '../interface/news';
 export class ApiPoliticsService {
   constructor(private http: HttpClient) {}
 
-  fristTime = true;
-
   getData(category: string, country: string): Observable<any> {
     return this.http.get<any>(
       `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}`
