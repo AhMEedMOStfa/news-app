@@ -32,11 +32,7 @@
   "dataGroups":[
     {
       "name":"news-api",
-      "urls":["https://newsapi.org/v2/everything?q=world&from=2022-07-02&to=2022-07-06&sortBy=popularity",
-              "https://newsapi.org/v2/everything?q=business&from=2022-07-02&to=2022-07-06&sortBy=popularity",
-              "https://newsapi.org/v2/everything?q=technology&from=2022-07-02&to=2022-07-06&sortBy=popularity",
-              "https://newsapi.org/v2/everything?q=politics&from=2022-07-02&to=2022-07-06&sortBy=popularity",
-              "https://newsapi.org/v2/everything?q=sports&from=2022-07-02&to=2022-07-06&sortBy=popularity"],
+      "urls":["https://newsapi.org/v2/everything?q=**&from=2022-07-02&to=2022-07-06&sortBy=popularity"],
       "cacheConfig":{
         "strategy":"freshness",
         "maxSize":20,
