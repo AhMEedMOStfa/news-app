@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { LazyLoadImageModule } from 'ng-lazyload-image'; 
 import {InputTextModule} from 'primeng/inputtext';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {CarouselModule} from 'primeng/carousel';
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -52,6 +53,7 @@ import { environment } from '../environments/environment';
     WorldComponent,
     CountryNewsComponent,
     TopicNewsComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import { environment } from '../environments/environment';
     InputTextModule,
     LazyLoadImageModule,
     NgxPaginationModule,
+    CarouselModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

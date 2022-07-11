@@ -1,17 +1,4 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: linear-gradient(135deg, black, red);
-} */
+
 .container {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -36,19 +23,7 @@ body {
   border-radius: 5px;
   background: linear-gradient(135deg, black, red);
 }
-/* .content form .user-details {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-} */
-/* form .user-details .input-box {
-  /* margin-bottom: 15px; */
-/* width: 100%; 
-}*/
-/* form .input-box span.details {
-  /* display: block;
-  font-weight: 500; */
-/* margin-bottom: 5px */
+
 .Input {
   height: 45px;
   width: 100%;
@@ -64,65 +39,11 @@ Input:focus,
 Input:valid {
   border-color: black;
 }
-/* form .gender-details .gender-title {
-  font-size: 20px;
-  font-weight: 500;
-}
-form .category {
-  display: flex;
-  width: 80%;
-  margin: 14px 0;
-  justify-content: space-between;
-}
-form .category label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-form .category label .dot {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-}
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three {
-  background: black;
-  border-color: red;
-}
-form input[type="radio"] {
-  display: none;
-} */
-/* form .button {
-  height: 45px;
-  margin: 35px 0;
-} */
+
 
 @media (max-width: 584px) {
   .container {
     max-width: 100%;
   }
-  /* form .user-details .input-box {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category {
-    width: 100%;
-  }
-  .content form .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar {
-    width: 5px;
-  } */
+
 }
-/* @media (max-width: 459px) {
-  .container .content .category {
-    flex-direction: column;
-  }
-} */
