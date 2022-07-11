@@ -9,11 +9,7 @@ import { LoaderService } from 'src/app/Services/loader.service';
 export class PoliticsComponent implements OnInit {
 
   constructor(
-    public loaderService: LoaderService,
   ) {}
 
-  ngOnInit(): void {
-
- 
-}
+  ngOnInit(): void {}
 }

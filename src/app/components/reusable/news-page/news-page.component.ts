@@ -4,6 +4,7 @@ import { News } from 'src/app/interface/news';
 import { ApiPoliticsService } from 'src/app/Services/api-news.service';
 import { SwUpdate } from '@angular/service-worker';
 import { PwaService } from 'src/app/Services/pwa.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 @Component({
   selector: 'app-news-page',
   templateUrl: './news-page.component.html',
@@ -20,10 +21,9 @@ export class NewsPageComponent implements OnInit {
   constructor(
     private _activateRouter: ActivatedRoute,
     private apiNews: ApiPoliticsService,
-    updates:SwUpdate , private pwa:PwaService
+    updates:SwUpdate , private pwa:PwaService,public loaderService: LoaderService
   ) {
     updates.available.subscribe(event=>{
-      // this.update=true;
       updates.activateUpdate().then(()=>document.location.reload());
     })
   }

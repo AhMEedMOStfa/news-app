@@ -1,9 +1,2 @@
-<div *ngIf="loaderService.isLoading | async; else notLoading">
-  <div class="text-center">
-    <div class="spinner-border" role="status"></div>
-  </div>
-</div>
+<app-news-page></app-news-page>
 
-<ng-template #notLoading>
-  <app-news-page></app-news-page>
-</ng-template>
