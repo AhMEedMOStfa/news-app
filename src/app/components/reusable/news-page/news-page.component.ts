@@ -15,6 +15,8 @@ export class NewsPageComponent implements OnInit {
   newsCategory: string = '';
   newsCountry: string = '';
   imgLoad = '../../../../assets/images/load.jpg';
+  pageLength:number=0;
+  page:number=1;
   constructor(
     private _activateRouter: ActivatedRoute,
     private apiNews: ApiPoliticsService,
@@ -31,6 +33,9 @@ export class NewsPageComponent implements OnInit {
     this.newsCountry = this._activateRouter.snapshot.routeConfig?.path!;
     this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
       this.worldNews = world.articles;
+      console.log(world.articles.length);
+      
+      this.pageLength = world.articles.length;
     });
     this.pwa.getNewsPwa(this.newsCategory).subscribe((news)=>{
       this.news=news;

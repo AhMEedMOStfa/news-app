@@ -8,7 +8,7 @@ import {ButtonModule} from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { LazyLoadImageModule } from 'ng-lazyload-image'; 
 import {InputTextModule} from 'primeng/inputtext';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -64,13 +64,12 @@ import { environment } from '../environments/environment';
     FormsModule,
     InputTextModule,
     LazyLoadImageModule,
+    NgxPaginationModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    }),
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

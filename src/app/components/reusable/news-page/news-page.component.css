@@ -1,7 +1,9 @@
 .w-25 {
     width: 25%;
 }
-
+.my-pagination ::ng-deep .ngx-pagination .current {
+   background: var(--main-color);
+ }
 .w-60 {
     width: 60%;
     margin: 0 auto;

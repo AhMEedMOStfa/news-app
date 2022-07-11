@@ -159,7 +159,7 @@
       </div>
       <ng-container
         class="col-md-6"
-        *ngFor="let manchet of worldNews; let i = index"
+        *ngFor="let manchet of worldNews | paginate: { itemsPerPage: 22, currentPage: page, totalItems:pageLength }; let i = index"
       >
         <div class="col-md-6" *ngIf="i < 6">
           <app-manchet [manchetData]="manchet"></app-manchet>
@@ -170,7 +170,14 @@
         <div class="col-md-6" *ngIf="i > 13 && i < 22">
           <app-manchet [manchetData]="manchet"></app-manchet>
         </div>
+        <div class="col-md-4" *ngIf="i > 22 && i<60">
+          <app-manchet [manchetData]="manchet"></app-manchet>
+        </div>
+        <div class="col-md-6" *ngIf="i >60">
+          <app-manchet [manchetData]="manchet"></app-manchet>
+        </div>
       </ng-container>
     </div>
+    <pagination-controls class="text-center p-2 my-pagination" (pageChange)="page = $event"></pagination-controls>
   </div>
 </ng-template>
