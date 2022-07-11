@@ -31,6 +31,8 @@ import { NewsPageComponent } from './components/reusable/news-page/news-page.com
 import { WorldComponent } from './components/pages/world/world.component';
 import { CountryNewsComponent } from './components/pages/country-news/country-news.component';
 import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +63,14 @@ import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.
     ButtonModule,
     FormsModule,
     InputTextModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

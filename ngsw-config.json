@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ],
+
+        "urls":["https://fonts.googleapis.com/**"]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups":[
+    {
+      "name":"news-api",
+      "urls":["https://newsapi.org/v2/everything?q=world&from=2022-07-02&to=2022-07-06&sortBy=popularity",
+              "https://newsapi.org/v2/everything?q=business&from=2022-07-02&to=2022-07-06&sortBy=popularity",
+              "https://newsapi.org/v2/everything?q=technology&from=2022-07-02&to=2022-07-06&sortBy=popularity",
+              "https://newsapi.org/v2/everything?q=politics&from=2022-07-02&to=2022-07-06&sortBy=popularity",
+              "https://newsapi.org/v2/everything?q=sports&from=2022-07-02&to=2022-07-06&sortBy=popularity"],
+      "cacheConfig":{
+        "strategy":"freshness",
+        "maxSize":20,
+        "maxAge":"1h",
+        "timeout":"5s"
+      }
+    }
+  ]
+}
