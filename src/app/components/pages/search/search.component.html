@@ -1,0 +1,13 @@
+<div *ngIf="searchedNews.length == 0; else notFound">
+  Search topic not found
+</div>
+
+<ng-template #notFound
+  ><div *ngFor="let news of searchedNews">
+    <div class="row">
+      <div class="col-md-6">
+        <app-manchet class="col-3" [manchetData]="news"></app-manchet>
+      </div>
+    </div>
+  </div>
+</ng-template>

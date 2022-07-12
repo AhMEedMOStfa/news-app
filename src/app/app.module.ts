@@ -34,6 +34,7 @@ import { CountryNewsComponent } from './components/pages/country-news/country-ne
 import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SearchComponent } from './components/pages/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { environment } from '../environments/environment';
     WorldComponent,
     CountryNewsComponent,
     TopicNewsComponent,
+    SearchComponent,
    
   ],
   imports: [

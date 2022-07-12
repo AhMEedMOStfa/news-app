@@ -1,4 +1,4 @@
-import { News } from './../../../interface/news';
+import { News } from '../news';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {

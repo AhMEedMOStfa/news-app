@@ -1,39 +1,104 @@
-<nav class="navbar navbar-expand-lg navbar-light"(scroll)="onScroll()" [ngClass]="navbarMove ? 'fixed':'.not-fixed'" >
+<nav
+  class="navbar navbar-expand-lg navbar-light"
+  (scroll)="onScroll()"
+  [ngClass]="navbarMove ? 'fixed' : '.not-fixed'"
+>
   <div class="container">
-    <a class="navbar-brand"class="dynamic-logo" routerLink="/home"><i class="mx-1 fa-solid fa-newspaper"></i>Dynamic News</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" class="dynamic-logo" routerLink="/home"
+      ><i class="mx-1 fa-solid fa-newspaper"></i>Dynamic News</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ul-links">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="/home" class="active-anchor" routerLinkActive="activeLink" aria-current="page" href="#">HOME</a>
+          <a
+            class="nav-link active"
+            routerLink="/home"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            aria-current="page"
+            href="#"
+            >HOME</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/politics" class="active-anchor"  routerLinkActive="activeLink">POLITICS</a>
+          <a
+            class="nav-link"
+            routerLink="/politics"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >POLITICS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/sports" class="active-anchor"  routerLinkActive="activeLink">SPORTS</a>
+          <a
+            class="nav-link"
+            routerLink="/sports"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >SPORTS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/technology" class="active-anchor"  routerLinkActive="activeLink">TECHNOLOGY</a>
+          <a
+            class="nav-link"
+            routerLink="/technology"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >TECHNOLOGY</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/business" class="active-anchor"  routerLinkActive="activeLink">BUSINESS</a>
+          <a
+            class="nav-link"
+            routerLink="/business"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >BUSINESS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/world" class="active-anchor"  routerLinkActive="activeLink">WORLD</a>
+          <a
+            class="nav-link"
+            routerLink="/world"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >WORLD</a
+          >
         </li>
         <li>
-          <a routerLink="/reading" class="active-anchor"  routerLinkActive="activeLink">READING <i class="mx-2 fa-regular fa-bookmark"></i
+          <a
+            routerLink="/reading"
+            class="active-anchor"
+            routerLinkActive="activeLink"
+            >READING <i class="mx-2 fa-regular fa-bookmark"></i
           ></a>
         </li>
       </ul>
       <div class="text-center">
-        <div class="p-input-icon-right p-input-filled">
-          <i class="pi pi-search"></i>
-        <input type="text" pInputText pInputText placeholder="Search" >         
-       </div>
+        <form
+          class="p-input-icon-right p-input-filled"
+          (ngSubmit)="search(topic.value)"
+        >
+          <i class="pi pi-search" (click)="search(topic.value)"></i>
+          <input
+            type="text"
+            pInputText
+            #topic
+            placeholder="Search"
+      
+          />
+        </form>
       </div>
     </div>
   </div>

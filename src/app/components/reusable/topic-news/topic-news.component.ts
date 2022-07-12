@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { News } from 'src/app/interface/news';
-import { ApiPoliticsService } from 'src/app/Services/api-news.service';
+import { News } from 'src/app/components/pages/news';
+import { ApiNewsService } from 'src/app/Services/api-news.service';
 
 @Component({
   selector: 'app-topic-news',
@@ -14,7 +14,7 @@ export class TopicNewsComponent implements OnInit {
   category: any = '';
   constructor(
     private _activateRouter: ActivatedRoute,
-    private apiNews: ApiPoliticsService
+    private apiNews: ApiNewsService
   ) {}
 
   ngOnInit(): void {

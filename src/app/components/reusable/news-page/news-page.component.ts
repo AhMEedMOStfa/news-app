@@ -1,7 +1,7 @@
+import { ApiNewsService } from './../../../Services/api-news.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { News } from 'src/app/interface/news';
-import { ApiPoliticsService } from 'src/app/Services/api-news.service';
+import { News } from 'src/app/components/pages/news';
 import { SwUpdate } from '@angular/service-worker';
 import { PwaService } from 'src/app/Services/pwa.service';
 import { LoaderService } from 'src/app/Services/loader.service';
@@ -16,16 +16,18 @@ export class NewsPageComponent implements OnInit {
   newsCategory: string = '';
   newsCountry: string = '';
   imgLoad = '../../../../assets/images/load.jpg';
-  pageLength:number=0;
-  page:number=1;
+  pageLength: number = 0;
+  page: number = 1;
   constructor(
     private _activateRouter: ActivatedRoute,
-    private apiNews: ApiPoliticsService,
-    updates:SwUpdate , private pwa:PwaService,public loaderService: LoaderService
+    private apiNews: ApiNewsService,
+    updates: SwUpdate,
+    private pwa: PwaService,
+    public loaderService: LoaderService
   ) {
-    updates.available.subscribe(event=>{
-      updates.activateUpdate().then(()=>document.location.reload());
-    })
+    updates.available.subscribe((event) => {
+      updates.activateUpdate().then(() => document.location.reload());
+    });
   }
 
   ngOnInit(): void {
@@ -34,11 +36,11 @@ export class NewsPageComponent implements OnInit {
     this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
       this.worldNews = world.articles;
       console.log(world);
-      
+
       this.pageLength = world.articles.length;
     });
-    this.pwa.getNewsPwa(this.newsCategory).subscribe((news)=>{
-      this.news=news;
-    })
+    this.pwa.getNewsPwa(this.newsCategory).subscribe((news) => {
+      this.news = news;
+    });
   }
 }

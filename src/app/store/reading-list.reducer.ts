@@ -1,4 +1,4 @@
-import { News } from './../interface/news';
+import { News } from '../components/pages/news';
 import { createReducer, on } from '@ngrx/store';
 import {
   AddtoReadingList,

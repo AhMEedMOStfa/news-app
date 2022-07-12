@@ -1,21 +1,22 @@
-import { Component, OnInit , HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, OnInit, HostListener } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  navbarMove: boolean = false;
+  constructor(private _router: Router) {}
 
-  navbarMove:boolean=false;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  @HostListener('window:scroll',['$event'])
-  onScroll()
-  {
-    if(window.scrollY) this.navbarMove=true;
-    else this.navbarMove=false;
+  ngOnInit(): void {}
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    if (window.scrollY) this.navbarMove = true;
+    else this.navbarMove = false;
   }
 
+  search(topic: string) {
+    this._router.navigate([`/search/${topic}`]);
+  }
 }

@@ -1,5 +1,5 @@
 import { ReadingListService } from './../../../Services/reading-list.service';
-import { News } from './../../../interface/news';
+import { News } from '../../pages/news';
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AddtoReadingList } from 'src/app/store/reading-list.action';

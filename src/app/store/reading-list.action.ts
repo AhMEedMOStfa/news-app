@@ -1,4 +1,4 @@
-import { News } from '../interface/news';
+import { News } from '../components/pages/news';
 import { createAction, props } from '@ngrx/store';
 
 export const AddtoReadingList = createAction(

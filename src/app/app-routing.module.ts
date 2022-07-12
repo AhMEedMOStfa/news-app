@@ -11,6 +11,7 @@ import { TechnologyComponent } from './components/pages/technology/technology.co
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { WorldComponent } from './components/pages/world/world.component';
 import { CountryNewsComponent } from './components/pages/country-news/country-news.component';
+import { SearchComponent } from './components/pages/search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,17 +26,30 @@ const routes: Routes = [
     component: SportsComponent,
     canActivate: [AuthenticationGuard],
   },
-  { path: 'technology', component: TechnologyComponent ,  canActivate: [AuthenticationGuard]},
-  { path: 'business', component: BusinessComponent ,  canActivate: [AuthenticationGuard] },
+  {
+    path: 'technology',
+    component: TechnologyComponent,
+    canActivate: [AuthenticationGuard],
+  },
+  {
+    path: 'business',
+    component: BusinessComponent,
+    canActivate: [AuthenticationGuard],
+  },
 
   { path: 'world', component: WorldComponent },
+  { path: 'search/:topic', component: SearchComponent },
   { path: 'home/:category/:country', component: CountryNewsComponent },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
 
-  { path: 'reading', component: ReadingComponent , canActivate: [AuthenticationGuard] },
+  {
+    path: 'reading',
+    component: ReadingComponent,
+    canActivate: [AuthenticationGuard],
+  },
   { path: '**', component: NotFoundComponent },
 ];
 
