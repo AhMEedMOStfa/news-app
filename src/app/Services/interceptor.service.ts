@@ -22,7 +22,7 @@ export class InterceptorService implements HttpInterceptor {
     req = req.clone({
       setParams: {
         language: 'en',
-        apiKey: 'ae57e2c718a444629059fa1fc20114a6',
+        apiKey: '9c673ebb32a7405fa3d141e1164c16fb',
       },
     });
     return next.handle(req).pipe(

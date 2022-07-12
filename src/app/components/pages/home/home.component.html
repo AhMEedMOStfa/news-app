@@ -1,16 +1,19 @@
 
-
+  <div class="carousel">
     <p-carousel [value]="homeArray" [numVisible]="3" [numScroll]="1" >
       
       <ng-template let-home pTemplate="item">
-        <div class="mx-4 my-5 carousel-card">
-          <img src={{home.urlToImage}} class="w-100 rounded"> 
-          <h3 class="my-4">{{home.title}}</h3>
-          <p>{{home.description}}</p>
+        <div class="mx-4 my-5 shadow  carousel-card">
+          <img src={{home.urlToImage}} class="w-100 "> 
+          <div class="carousel-desc p-3">
+            <h3 class="my-4">{{home.title}}</h3>
+            <p>{{home.description}}</p>
+          </div>
         </div>
       </ng-template>
    
-  </p-carousel>
+   </p-carousel>
+  </div>
   
 
 

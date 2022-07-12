@@ -83,3 +83,9 @@ i:hover
     color: var(--main-color);
     transform: scale(1.1);
 }
+@media screen and (max-width:900px) {
+    .header-desc
+    {
+        display: none;
+    }
+}

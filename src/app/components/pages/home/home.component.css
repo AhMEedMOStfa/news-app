@@ -2,7 +2,36 @@
 {
     height: 100px;
 }
+
 .carousel-card p 
 {
     height: 150px;
+}
+.carousel-desc h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 70px;
+}
+.carousel-desc p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 100px;
+}
+
+@media (max-width:880px) {
+    .carousel{
+        display: none;
+    }
+    .carousel-desc h3
+    {
+        font-size: 12px;
+    }
+    .carousel-desc p
+    {
+        font-size: 12px;
+    }
 }
