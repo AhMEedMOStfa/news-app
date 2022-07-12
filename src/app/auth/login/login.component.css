@@ -40,6 +40,24 @@ Input:valid {
   border-color: black;
 }
 
+ .button{
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, black, red);
+}
+
+.form-check 
+{
+  padding: 0 !important;
+}
+
 
 @media (max-width: 584px) {
   .container {
