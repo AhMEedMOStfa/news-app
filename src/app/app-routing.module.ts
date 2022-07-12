@@ -25,8 +25,8 @@ const routes: Routes = [
     component: SportsComponent,
     canActivate: [AuthenticationGuard],
   },
-  { path: 'technology', component: TechnologyComponent },
-  { path: 'business', component: BusinessComponent },
+  { path: 'technology', component: TechnologyComponent ,  canActivate: [AuthenticationGuard]},
+  { path: 'business', component: BusinessComponent ,  canActivate: [AuthenticationGuard] },
 
   { path: 'world', component: WorldComponent },
   { path: 'home/:category/:country', component: CountryNewsComponent },
@@ -35,7 +35,7 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
 
-  { path: 'reading', component: ReadingComponent },
+  { path: 'reading', component: ReadingComponent , canActivate: [AuthenticationGuard] },
   { path: '**', component: NotFoundComponent },
 ];
 
