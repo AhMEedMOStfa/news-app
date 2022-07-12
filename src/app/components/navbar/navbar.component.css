@@ -53,8 +53,8 @@ li{
 }
 .active-anchor 
  {
-    padding: 8px;
-    font-size: 14px;
+    padding: 25px 6px;
+    font-size: 13px;
     font-weight: 600;
  }  
 }
