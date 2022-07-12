@@ -13,6 +13,7 @@ import {
 })
 export class ReadingComponent implements OnInit {
   readingList: News[] = [];
+  imgLoad='../../../../assets/images/empty.jpg';
   constructor(private store: Store<{ readingList: News[] }>) {
     store.select('readingList').subscribe((res) => {
       this.readingList = res;

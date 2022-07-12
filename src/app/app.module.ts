@@ -10,6 +10,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import {InputTextModule} from 'primeng/inputtext';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {CarouselModule} from 'primeng/carousel';
+import {SkeletonModule} from 'primeng/skeleton';
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { TopicNewsComponent } from './components/reusable/topic-news/topic-news.
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SearchComponent } from './components/pages/search/search.component';
+import { SkeletonComponent } from './components/reusable/skeleton/skeleton.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,7 @@ import { SearchComponent } from './components/pages/search/search.component';
     CountryNewsComponent,
     TopicNewsComponent,
     SearchComponent,
+    SkeletonComponent,
    
   ],
   imports: [
@@ -70,6 +73,7 @@ import { SearchComponent } from './components/pages/search/search.component';
     LazyLoadImageModule,
     NgxPaginationModule,
     CarouselModule,
+    SkeletonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
