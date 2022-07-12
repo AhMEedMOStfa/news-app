@@ -15,6 +15,8 @@ export class NewsPageComponent implements OnInit {
   news: News[] = [];
   newsCategory: string = '';
   newsCountry: string = '';
+  worldDestroy:any;
+  pwaDestroy:any;
   imgLoad = '../../../../assets/images/load.jpg';
   pageLength: number = 0;
   page: number = 1;
@@ -33,14 +35,20 @@ export class NewsPageComponent implements OnInit {
   ngOnInit(): void {
     this.newsCategory = this._activateRouter.snapshot.routeConfig?.path!;
     this.newsCountry = this._activateRouter.snapshot.routeConfig?.path!;
-    this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
+    this.worldDestroy = this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
       this.worldNews = world.articles;
       console.log(world);
 
       this.pageLength = world.articles.length;
     });
-    this.pwa.getNewsPwa(this.newsCategory).subscribe((news) => {
+    this.pwaDestroy = this.pwa.getNewsPwa(this.newsCategory).subscribe((news) => {
       this.news = news;
     });
+  }
+
+  ngOnDestroy(): void
+  {
+    this.worldDestroy.unsubscribe(); 
+    this.pwaDestroy.unsubscribe();
   }
 }

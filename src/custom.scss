@@ -1,0 +1,23 @@
+
+@import "~@angular/material/theming";
+
+
+@include mat-core();
+
+
+$market-primary: mat-palette($mat-light-blue);
+$market-accent: mat-palette($mat-light-green);
+$market-warn: mat-palette($mat-red);
+
+$market-theme: mat-light-theme($market-primary, $market-accent, $market-warn);
+@include angular-material-theme($market-theme);
+
+//for dark theme
+$market-primary-dark: mat-palette($mat-orange);
+$market-accent-dark: mat-palette($mat-yellow);
+$market-warn-dark: mat-palette($mat-red);
+
+$market-theme-dark: mat-dark-theme($market-primary-dark, $market-accent-dark, $market-warn-dark);
+.dark-theme-mode {
+    @include angular-material-theme($market-theme-dark);
+}
