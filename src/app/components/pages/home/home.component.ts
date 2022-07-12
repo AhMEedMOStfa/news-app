@@ -34,7 +34,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.api.getWorldData(this.homeCategory).subscribe((world)=>{
      this.homeNews = world.articles;
-     this.homeArray=[this.homeNews[0],this.homeNews[1],this.homeNews[2],this.homeNews[3],this.homeNews[4],this.homeNews[5]]
+     this.homeArray=[this.homeNews[10],this.homeNews[22],this.homeNews[30],this.homeNews[3],this.homeNews[4],this.homeNews[5],
+     this.homeNews[24],this.homeNews[52],this.homeNews[33]]
     
  
     })

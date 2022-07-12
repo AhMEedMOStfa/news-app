@@ -5,7 +5,6 @@
 }
 nav
 {
-    box-shadow: 2px 4px 5px rgb(0 0 0 / 15%);
     background-color: #b00507;
 }
 .fixed
@@ -19,19 +18,20 @@ nav
 
 
 li{
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 .dynamic-logo
 {
     text-decoration: none;
     color: white;
+    font-size: 24px;
     font-weight: bolder;
 }
 .active-anchor
 {
     text-decoration: none;
     color: white;
-    padding: 23px 12px;
+    padding: 26px 16px;
     transition: 0.2s all;
     font-weight: 700;
 }
@@ -40,6 +40,23 @@ li{
 {
     color:#b00507;
     background-color: white;  
+}
+@media (max-width:1400px) {
+ 
+.dynamic-logo
+{
+    font-size: 18px;
+}
+.ul-links
+{
+    text-align: center;
+}
+.active-anchor 
+ {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+ }  
 }
 
 
