@@ -37,7 +37,7 @@ export class NewsPageComponent implements OnInit {
     this.newsCountry = this._activateRouter.snapshot.routeConfig?.path!;
     this.worldDestroy = this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
       this.worldNews = world.articles;
-      console.log(world);
+      // console.log(world);
 
       this.pageLength = world.articles.length;
     });
