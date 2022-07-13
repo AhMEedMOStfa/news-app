@@ -38,7 +38,7 @@ const routes: Routes = [
   },
 
   { path: 'world', component: WorldComponent },
-  { path: 'search/:topic', component: SearchComponent },
+  { path: 'search/:topic', component: SearchComponent , canActivate: [AuthenticationGuard], },
   { path: 'home/:category/:country', component: CountryNewsComponent },
   {
     path: 'auth',

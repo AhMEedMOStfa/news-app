@@ -10,6 +10,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import {InputTextModule} from 'primeng/inputtext';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {CarouselModule} from 'primeng/carousel';
+import { ToastrModule } from 'ngx-toastr';
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -69,6 +70,12 @@ import { SearchComponent } from './components/pages/search/search.component';
     InputTextModule,
     LazyLoadImageModule,
     NgxPaginationModule,
+    ToastrModule.forRoot({
+      timeOut : 2000 , 
+      progressBar : true,
+      progressAnimation : 'increasing' , 
+      preventDuplicates : true ,
+    }),
     CarouselModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
