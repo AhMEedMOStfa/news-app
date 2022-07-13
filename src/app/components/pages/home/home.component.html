@@ -1,6 +1,6 @@
 
   <div class="carousel">
-    <p-carousel [value]="homeArray" [numVisible]="3" [numScroll]="1" >
+    <p-carousel [value]="homeArray" [numVisible]="3" [numScroll]="1"  [autoplayInterval]="3000" [circular]="true" >
       
       <ng-template let-home pTemplate="item">
         <div class="mx-4 my-5 shadow  carousel-card">
