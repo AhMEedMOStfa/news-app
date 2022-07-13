@@ -1,13 +1,24 @@
-<div *ngIf="searchedNews.length == 0; else notFound">
-  Search topic not found
-</div>
+<div *ngIf="loaderService.isLoading | async; else loading">
+  <app-skeleton></app-skeleton>
+</div>  
 
-<ng-template #notFound
-  ><div *ngFor="let news of searchedNews ">
-    <div class="row">
-      <div class="col-md-6">
-        <app-manchet class="col-3" [manchetData]="news"></app-manchet>
-      </div>
+<ng-template #loading
+>
+  <div *ngIf="searchedNews.length==0 ; else found">
+    <div class="text-center my-3">
+      <h2 class="text-danger">No Result </h2>
+      <img src="../../../../assets/images/search.jpg" [lazyLoad]="imgLoad" class="w-25" alt="">
     </div>
   </div>
+  <ng-template #found>
+    <div class="w-60">
+      <div class="row">
+        <ng-container *ngFor="let news of searchedNews">
+          <div class="col-md-6">
+            <app-manchet [manchetData]="news"></app-manchet>
+          </div>
+        </ng-container>
+      </div>
+      </div>
+  </ng-template>
 </ng-template>

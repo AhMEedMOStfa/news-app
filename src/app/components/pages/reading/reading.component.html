@@ -34,7 +34,10 @@
 
   <ng-template #showBtnViewNews>
     <div class="text-center my-5 py-5">
-      <h2>There Is No News To Read.</h2>
+      <div>
+        <h2 class="text-danger">There Is No News To Read.</h2>
+        <img src="../../../../assets/images/empty.jpg" [lazyLoad]="imgLoad" class="w-25" alt="">
+      </div>
       <button class="Btn w-25 mt-4" routerLink="/home">Go To News</button>
     </div>
   </ng-template>

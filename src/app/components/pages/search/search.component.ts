@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { News } from '../news';
 import { ApiNewsService } from '../../../Services/api-news.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 
 @Component({
   selector: 'app-search',
@@ -11,9 +12,11 @@ import { ApiNewsService } from '../../../Services/api-news.service';
 export class SearchComponent implements OnInit {
   topic: any = '';
   searchedNews: News[] = [];
+  imgLoad:string='../../../../assets/images/search.jpg';
   constructor(
     private _activateRouter: ActivatedRoute,
-    private apiNewsService: ApiNewsService
+    private apiNewsService: ApiNewsService,
+    public loaderService:LoaderService
   ) {}
 
   ngOnInit(): void {
@@ -21,7 +24,5 @@ export class SearchComponent implements OnInit {
     this.apiNewsService.getSearchedTopic(this.topic).subscribe((res) => {
       this.searchedNews = res.articles;
     });
-
-    console.log('searched', this.searchedNews);
   }
 }
