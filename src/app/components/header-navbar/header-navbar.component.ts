@@ -13,11 +13,13 @@ import { LocalStorageService } from 'src/app/Services/local-storage.service';
 export class HeaderNavbarComponent implements OnInit {
   email: string = '';
   isLogin: boolean = false;
-  urlCategory:any='';
+  urlCategory: any = '';
 
-  constructor(public _userEmail: LocalStorageService,private language:LanguageService ,private _router:Router) {
-    
-  }
+  constructor(
+    public _userEmail: LocalStorageService,
+    private language: LanguageService,
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
     this._userEmail.getEmail().subscribe((res: string) => {
@@ -33,26 +35,19 @@ export class HeaderNavbarComponent implements OnInit {
     this.email = '';
     this._userEmail.deleteState();
   }
-  putFrenchLang()
-  {
+  putFrenchLang() {
+    this.urlCategory = this._router.url;
   
-     this.urlCategory=this._router.url;
-     console.log(this.urlCategory);
-     
+
     this.language.setLanguage('fr');
-    this._router
-    .navigate([`/dvsd`], { skipLocationChange: true })
-    .then(() => {
+    this._router.navigate([`/dvsd`], { skipLocationChange: true }).then(() => {
       this._router.navigate([`${this.urlCategory}`]);
     });
   }
-  putEnglishLang()
-  {
-    this.urlCategory=this._router.url;
+  putEnglishLang() {
+    this.urlCategory = this._router.url;
     this.language.setLanguage('en');
-    this._router
-    .navigate([`/bdfb`], { skipLocationChange: true })
-    .then(() => {
+    this._router.navigate([`/bdfb`], { skipLocationChange: true }).then(() => {
       this._router.navigate([`${this.urlCategory}`]);
     });
   }

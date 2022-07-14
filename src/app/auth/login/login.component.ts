@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
   }
 
   checkAuth() {
-    return localStorage.setItem('auth', 'true');
+    return localStorage.setItem('authGuard', JSON.stringify('canActivate'));
   }
 
   onChange(e: any) {

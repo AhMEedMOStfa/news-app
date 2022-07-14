@@ -619,7 +619,7 @@ export class NewsPageComponent implements OnInit {
     this.newsCountry &#x3D; this._activateRouter.snapshot.routeConfig?.path!;
     this.apiNews.getWorldData(this.newsCategory).subscribe((world) &#x3D;&gt; {
       this.worldNews &#x3D; world.articles;
-      console.log(world);
+
       
       this.pageLength &#x3D; world.articles.length;
     });

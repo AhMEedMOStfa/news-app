@@ -13,24 +13,25 @@ import { LanguageService } from './language.service';
   providedIn: 'root',
 })
 export class InterceptorService implements HttpInterceptor {
-  constructor(private loaderService: LoaderService,private language:LanguageService) {}
-   lang:string=''; 
+  constructor(
+    private loaderService: LoaderService,
+    private language: LanguageService
+  ) {}
+  lang: string = '';
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     this.loaderService.isLoading.next(true);
     //'ae57e2c718a444629059fa1fc20114a6'
-     this.language.getLanguage().subscribe((res)=> this.lang=res);
-        req = req.clone({
+    this.language.getLanguage().subscribe((res) => (this.lang = res));
+    req = req.clone({
       setParams: {
         language: this.lang,
-        apiKey: '7eb9e60fe9d04c68b8f74063c633b624',
+        apiKey: 'ae57e2c718a444629059fa1fc20114a6',
       },
-    });   
+    });
 
-    console.log(req);
-    
     return next.handle(req).pipe(
       finalize(() => {
         this.loaderService.isLoading.next(false);

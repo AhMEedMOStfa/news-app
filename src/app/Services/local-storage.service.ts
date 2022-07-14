@@ -43,6 +43,7 @@ export class LocalStorageService {
 
   deleteState() {
     localStorage.setItem('saveLogin', JSON.stringify(''));
+    localStorage.setItem('authGuard', JSON.stringify(''));
   }
 
   setEmail() {

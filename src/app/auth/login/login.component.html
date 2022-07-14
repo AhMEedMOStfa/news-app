@@ -64,14 +64,18 @@
       <div class="form-check">
         <input
           type="checkbox"
-          class="mx-1 mb-3 "
+          class="mx-1 mb-3"
           id="saveLogin"
           (change)="onChange($event)"
         />
         <label class="form-check-label" for="saveLogin">Remember Me</label>
       </div>
 
-      <button  type="submit" (click)="checkAuth()"  class="button btn btn-primary mb-3 px-4">
+      <button
+        type="submit"
+        (click)="checkAuth()"
+        class="button btn btn-primary mb-3 px-4"
+      >
         Log-In
       </button>
       <p class="my-2 text-center">
