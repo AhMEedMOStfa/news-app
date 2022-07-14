@@ -29,6 +29,10 @@ export class HeaderNavbarComponent implements OnInit {
     if (!this.email) {
       this.email = this._userEmail.getState();
     }
+
+    if (!this.email) {
+      localStorage.setItem('authGuard', JSON.stringify(''));
+    }
   }
 
   logout() {
@@ -37,7 +41,6 @@ export class HeaderNavbarComponent implements OnInit {
   }
   putFrenchLang() {
     this.urlCategory = this._router.url;
-  
 
     this.language.setLanguage('fr');
     this._router.navigate([`/dvsd`], { skipLocationChange: true }).then(() => {
