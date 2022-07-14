@@ -24,7 +24,6 @@ export class AuthenticationGuard implements CanActivate {
     | boolean
     | UrlTree {
     let authGuard = JSON.parse(localStorage.getItem('authGuard')!);
-    console.log('authGuard', authGuard);
 
     if (authGuard == 'canActivate') {
       return true;
