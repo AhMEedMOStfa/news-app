@@ -7,6 +7,10 @@
 {
     height: 150px;
 }
+.carousel-card img 
+{
+    height: 300px;
+}
 .carousel-desc h3 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -21,7 +25,12 @@
     overflow: hidden;
     height: 100px;
 }
-
+.country-news
+{
+    position: absolute;
+    top: 90%;
+    left: 10px;
+}
 @media (max-width:880px) {
     .carousel{
         display: none;

@@ -12,6 +12,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {CarouselModule} from 'primeng/carousel';
 import { ToastrModule } from 'ngx-toastr';
 import {SkeletonModule} from 'primeng/skeleton';
+import {RadioButtonModule} from 'primeng/radiobutton';
+
 //components
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -81,6 +83,7 @@ import { SkeletonComponent } from './components/reusable/skeleton/skeleton.compo
     }),
     CarouselModule,
     SkeletonModule,
+    RadioButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production,registrationStrategy: 'registerWhenStable:30000'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

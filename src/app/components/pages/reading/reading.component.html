@@ -5,7 +5,8 @@
         <a class="text-decoration-none" href="{{ news.url }}" target="_blank">
           <div class="news-card row">
             <img
-              src="{{ news.urlToImage }}"
+              src="../../../../assets/images/load (2).png"
+              [lazyLoad]="news.urlToImage "
               class="manchet-img col card-img-top w-25"
               alt="#"
             />

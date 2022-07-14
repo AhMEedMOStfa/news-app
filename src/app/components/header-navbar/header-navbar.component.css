@@ -9,6 +9,10 @@ a:hover
 {
     color: var(--main-color);
 }
+.lang
+{
+    cursor: pointer;
+}
 ul
 {
     margin: 0;

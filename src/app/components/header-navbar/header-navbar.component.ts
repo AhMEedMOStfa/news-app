@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InterceptorService } from 'src/app/Services/interceptor.service';
+import { LanguageService } from 'src/app/Services/language.service';
+import { LoaderService } from 'src/app/Services/loader.service';
 import { LocalStorageService } from 'src/app/Services/local-storage.service';
 
 @Component({
@@ -10,9 +13,11 @@ import { LocalStorageService } from 'src/app/Services/local-storage.service';
 export class HeaderNavbarComponent implements OnInit {
   email: string = '';
   isLogin: boolean = false;
-  
+  urlCategory:any='';
 
-  constructor(public _userEmail: LocalStorageService,private language:InterceptorService) {}
+  constructor(public _userEmail: LocalStorageService,private language:LanguageService ,private _router:Router) {
+    
+  }
 
   ngOnInit(): void {
     this._userEmail.getEmail().subscribe((res: string) => {
@@ -30,10 +35,25 @@ export class HeaderNavbarComponent implements OnInit {
   }
   putFrenchLang()
   {
-    this.language.lang ='fr';
+  
+     this.urlCategory=this._router.url;
+     console.log(this.urlCategory);
+     
+    this.language.setLanguage('fr');
+    this._router
+    .navigate([`/dvsd`], { skipLocationChange: true })
+    .then(() => {
+      this._router.navigate([`${this.urlCategory}`]);
+    });
   }
   putEnglishLang()
   {
-    this.language.lang ='en'; 
+    this.urlCategory=this._router.url;
+    this.language.setLanguage('en');
+    this._router
+    .navigate([`/bdfb`], { skipLocationChange: true })
+    .then(() => {
+      this._router.navigate([`${this.urlCategory}`]);
+    });
   }
 }

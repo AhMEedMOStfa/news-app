@@ -34,11 +34,9 @@ export class NewsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsCategory = this._activateRouter.snapshot.routeConfig?.path!;
-    this.newsCountry = this._activateRouter.snapshot.routeConfig?.path!;
     this.worldDestroy = this.apiNews.getWorldData(this.newsCategory).subscribe((world) => {
       this.worldNews = world.articles;
-      // console.log(world);
-
+      console.log(this.worldNews);
       this.pageLength = world.articles.length;
     });
     this.pwaDestroy = this.pwa.getNewsPwa(this.newsCategory).subscribe((news) => {

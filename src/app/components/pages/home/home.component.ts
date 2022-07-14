@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   homeCategory: string = 'everything';
   homeNews: any;
   homeArray: number[] = [1, 2, 3, 4, 5, 6];
+  imgLoad:string='../../'
   constructor(private router: Router, private api: ApiNewsService) {}
   countries = [
     { name: 'United States', code: 'us' },
@@ -32,15 +33,15 @@ export class HomeComponent implements OnInit {
     this.api.getWorldData(this.homeCategory).subscribe((world) => {
       this.homeNews = world.articles;
       this.homeArray = [
-        this.homeNews[10],
-        this.homeNews[22],
-        this.homeNews[30],
-        this.homeNews[3],
-        this.homeNews[4],
+        this.homeNews[8],
         this.homeNews[5],
-        this.homeNews[24],
-        this.homeNews[52],
-        this.homeNews[33],
+        this.homeNews[6],
+        this.homeNews[4],
+        this.homeNews[3],
+        this.homeNews[1],
+        this.homeNews[10],
+        this.homeNews[12],
+        this.homeNews[13],
       ];
     });
   }

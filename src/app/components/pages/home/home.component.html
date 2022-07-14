@@ -4,7 +4,7 @@
       
       <ng-template let-home pTemplate="item">
         <div class="mx-4 my-5 shadow  carousel-card">
-          <img src={{home.urlToImage}} class="w-100 "> 
+          <img src='../../../../assets/images/load (2).png' [lazyLoad]="home.urlToImage"  class="img w-100 "> 
           <div class="carousel-desc p-3">
             <h3 class="my-4">{{home.title}}</h3>
             <p>{{home.description}}</p>
@@ -15,9 +15,6 @@
    </p-carousel>
   </div>
   
-
-
-
 <app-news-page>
   
 </app-news-page>
