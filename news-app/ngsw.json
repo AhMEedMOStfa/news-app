@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1657830192278,
+  "timestamp": 1657831615766,
   "index": "https://AhMEedMOStfa.github.io/news-app/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://AhMEedMOStfa.github.io/news-app/94.bf39015afe2559e6.js",
         "https://AhMEedMOStfa.github.io/news-app/favicon.ico",
         "https://AhMEedMOStfa.github.io/news-app/index.html",
-        "https://AhMEedMOStfa.github.io/news-app/main.fc0bea6b3c779b58.js",
+        "https://AhMEedMOStfa.github.io/news-app/main.736de707126a054e.js",
         "https://AhMEedMOStfa.github.io/news-app/manifest.webmanifest",
         "https://AhMEedMOStfa.github.io/news-app/polyfills.69fb40c716151ac8.js",
         "https://AhMEedMOStfa.github.io/news-app/runtime.e3df1a43b1745b44.js",
@@ -105,8 +105,8 @@
     "https://AhMEedMOStfa.github.io/news-app/fa-v4compatibility.ee06c6f803f379bb.woff2": "951ded71094a52e249ac52799fac7cbb68368270",
     "https://AhMEedMOStfa.github.io/news-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://AhMEedMOStfa.github.io/news-app/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "https://AhMEedMOStfa.github.io/news-app/index.html": "91dda2b6f6326c216f174537d29f19adbd393667",
-    "https://AhMEedMOStfa.github.io/news-app/main.fc0bea6b3c779b58.js": "c976974068b44ba7f60636dc839fc7fa3c9a3b69",
+    "https://AhMEedMOStfa.github.io/news-app/index.html": "bf47af13cd75d4e3e881ee0542bbb52d151ca2ab",
+    "https://AhMEedMOStfa.github.io/news-app/main.736de707126a054e.js": "6bc964d577b3873d3e870f443b3c0df52ece2cc3",
     "https://AhMEedMOStfa.github.io/news-app/manifest.webmanifest": "1ac99b1d65e900f166326edffa8df7a686e86a29",
     "https://AhMEedMOStfa.github.io/news-app/polyfills.69fb40c716151ac8.js": "fb7d66e3f1ba73b3387bd4118e80348f5e5c7e9a",
     "https://AhMEedMOStfa.github.io/news-app/primeicons.29151a741d66863a.woff": "21e477ea19e15b66344bcc23b3fbb2161092a707",
