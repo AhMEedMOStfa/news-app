@@ -1,0 +1,140 @@
+{
+  "configVersion": 1,
+  "timestamp": 1657920250274,
+  "index": "/news-app/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/news-app/94.5bae733b63397c26.js",
+        "/news-app/favicon.ico",
+        "/news-app/index.html",
+        "/news-app/main.37a0945fd9143d21.js",
+        "/news-app/manifest.webmanifest",
+        "/news-app/polyfills.69fb40c716151ac8.js",
+        "/news-app/runtime.ad60194f5868ba60.js",
+        "/news-app/scripts.abbb37f329463b12.js",
+        "/news-app/styles.11f80f5cb659a00f.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/news-app/assets/icons/icon-128x128.png",
+        "/news-app/assets/icons/icon-144x144.png",
+        "/news-app/assets/icons/icon-152x152.png",
+        "/news-app/assets/icons/icon-192x192.png",
+        "/news-app/assets/icons/icon-384x384.png",
+        "/news-app/assets/icons/icon-512x512.png",
+        "/news-app/assets/icons/icon-72x72.png",
+        "/news-app/assets/icons/icon-96x96.png",
+        "/news-app/assets/icons/newspaper.png",
+        "/news-app/assets/images/404.jpg",
+        "/news-app/assets/images/empty.jpg",
+        "/news-app/assets/images/load (2).png",
+        "/news-app/assets/images/load.png",
+        "/news-app/assets/images/search.jpg",
+        "/news-app/color.dae87a04d07ca92b.png",
+        "/news-app/fa-brands-400.7fa789ab57acb632.ttf",
+        "/news-app/fa-brands-400.859fc3887485de84.woff2",
+        "/news-app/fa-regular-400.2ffd018f0eda6f7b.woff2",
+        "/news-app/fa-regular-400.da02cb7e372f16a2.ttf",
+        "/news-app/fa-solid-900.3a463ec33b4fe9f7.ttf",
+        "/news-app/fa-solid-900.40ddefd79fe7af45.woff2",
+        "/news-app/fa-v4compatibility.924588dc97e66b08.ttf",
+        "/news-app/fa-v4compatibility.ee06c6f803f379bb.woff2",
+        "/news-app/hue.8b1818380241e6ac.png",
+        "/news-app/primeicons.29151a741d66863a.woff",
+        "/news-app/primeicons.5f5d08cd089b4e5d.ttf",
+        "/news-app/primeicons.76044b1c189cc4d7.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "news-api",
+      "patterns": [
+        "https:\\/\\/newsapi\\.org\\/v2\\/everything\\?q=[^/]*[^/]*&from=2022-07-02&to=2022-07-06&sortBy=popularity"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 3600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/news-app/94.5bae733b63397c26.js": "0cd0c0ba9e57fe331194bd26d4a8ed99b8584605",
+    "/news-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/news-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/news-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/news-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/news-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/news-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/news-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/news-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/news-app/assets/icons/newspaper.png": "22b40fc53abfde581f8787e6c43f0d2360677762",
+    "/news-app/assets/images/404.jpg": "570f518b23239e5c7d74eceaa88fbc4ccfc72cf5",
+    "/news-app/assets/images/empty.jpg": "acc1c7a7e9c43527e435b8c79bc8126d3d053264",
+    "/news-app/assets/images/load (2).png": "124134580149516a28221628466ddff5a698ebd9",
+    "/news-app/assets/images/load.png": "a6d186dcfe1651b904eee4f53032b24e7bd998df",
+    "/news-app/assets/images/search.jpg": "4b887413a325fb7e123fa292b6305cc5fa697a90",
+    "/news-app/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
+    "/news-app/fa-brands-400.7fa789ab57acb632.ttf": "acc07d5e1ab5b96b23fabb53b1f4e416c7c0a46d",
+    "/news-app/fa-brands-400.859fc3887485de84.woff2": "a280ecdddd14695fad22599301ab03adfe5224c0",
+    "/news-app/fa-regular-400.2ffd018f0eda6f7b.woff2": "379ca48f70f3d4f79f8bf1079881c7c5af4f44a4",
+    "/news-app/fa-regular-400.da02cb7e372f16a2.ttf": "a14023c43173628d93858c0f3fc90cf54b18a28e",
+    "/news-app/fa-solid-900.3a463ec33b4fe9f7.ttf": "9225d6cb428fce41704cab29b8bb43b76c67f8b4",
+    "/news-app/fa-solid-900.40ddefd79fe7af45.woff2": "2717f3f58271f2f2e6120d9937c7227002656d34",
+    "/news-app/fa-v4compatibility.924588dc97e66b08.ttf": "e688e02012b9e5269a09809b0d666edc87527cb2",
+    "/news-app/fa-v4compatibility.ee06c6f803f379bb.woff2": "951ded71094a52e249ac52799fac7cbb68368270",
+    "/news-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/news-app/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
+    "/news-app/index.html": "af7af9387646d917ae4b9804bbf07ed0777219ba",
+    "/news-app/main.37a0945fd9143d21.js": "4ffb168f691412621ba1510c19a308677c6002ae",
+    "/news-app/manifest.webmanifest": "1ac99b1d65e900f166326edffa8df7a686e86a29",
+    "/news-app/polyfills.69fb40c716151ac8.js": "fb7d66e3f1ba73b3387bd4118e80348f5e5c7e9a",
+    "/news-app/primeicons.29151a741d66863a.woff": "21e477ea19e15b66344bcc23b3fbb2161092a707",
+    "/news-app/primeicons.5f5d08cd089b4e5d.ttf": "e6c86ca90a9fb4282fb35523d56fde00e78a1416",
+    "/news-app/primeicons.76044b1c189cc4d7.svg": "621775b2ec555fd2dd152a24390cf6dfeee168b1",
+    "/news-app/runtime.ad60194f5868ba60.js": "0416ad61288d85c1ce34df80d2635573562bcde3",
+    "/news-app/scripts.abbb37f329463b12.js": "f071c80334dd74cc1a8b8d6044d58933cf76d0af",
+    "/news-app/styles.11f80f5cb659a00f.css": "4a1bed591234e2139ce312048309f50563a0859d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
